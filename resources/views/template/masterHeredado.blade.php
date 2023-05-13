@@ -1,5 +1,6 @@
 @extends('template.master')
 @section('okas')
+{{csrf_field()}}
 <div class="wrapper">
     <div class="container-fluid">
 
@@ -14,7 +15,9 @@
                                 <li class="breadcrumb-item active">Dashboard</li>
                             </ol>
                         </div>
-                        <h4 class="page-title">Dashboard</h4>
+                        <div class="card-body">
+                            <a href="{{url('material/create')}}" class="btn btn-success btn-sm" title="Add new material">Add material</a>
+                        </div>
                     </div>
                 </div>
             </div>     

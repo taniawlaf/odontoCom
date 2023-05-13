@@ -34,6 +34,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/testing',[App\Http\Controllers\MaterialesController::class, 'index']);
+//Route::get('/material/create',[App\Http\Controllers\MaterialesController::class, 'create']);
+Route::get('/material',[App\Http\Controllers\MaterialesController::class,'index']);
+Route::get('/material/create',[App\Http\Controllers\MaterialesController::class,'create']);
+Route::post('/material/store',[App\Http\Controllers\MaterialesController::class,'saveRecord']);
 
 /*GET
 POST:GUARDAR
