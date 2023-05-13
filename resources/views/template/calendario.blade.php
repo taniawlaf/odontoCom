@@ -1,28 +1,36 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>OdontoCom</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('style/assets/images/favicon.ico') }}">
+<head>
+  <meta charset="utf-8" />
+  <title>OdontoCom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+  <meta content="Coderthemes" name="author" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="{{ asset('style/assets/images/favicon.ico') }}">
 
-        <!-- plugin css -->
-        <link href="{{asset('style/assets/libs/jquery-vectormap/jquery-jvectormap-1.2.2.css')}}" rel="stylesheet" type="text/css" />
+  <!-- plugin css -->
+  <link href="{{asset('style/assets/libs/jquery-vectormap/jquery-jvectormap-1.2.2.css')}}" rel="stylesheet" type="text/css" />
 
-        <!-- App css -->
-        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">-->
-        <link href="{!! asset('style/assets/css/bootstrap.min.css') !!}" rel="stylesheet" type="text/css" />
-        <link href="{!! asset('style/assets/css/icons.min.css') !!}" rel="stylesheet" type="text/css" />
-        <link href="{!! asset('style/assets/css/app.min.css') !!}" rel="stylesheet" type="text/css" />
-        <!--@vite(['resources/js/app.js','resources/sass/app.scss'])-->
-    </head>
+  <!-- App css -->
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">-->
+  <link href="{!! asset('style/assets/css/stylecal.css') !!}" rel="stylesheet" type="text/css" />
+  <link href="{!! asset('style/assets/css/bootstrap.min.css') !!}" rel="stylesheet" type="text/css" />
+  <link href="{!! asset('style/assets/css/icons.min.css') !!}" rel="stylesheet" type="text/css" />
+  <link href="{!! asset('style/assets/css/app.min.css') !!}" rel="stylesheet" type="text/css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+
 <body>
-    <header id="topnav">
-        <br>
+    <header id="topnav" class="moved">
         <!-- Topbar Start -->
         <div class="navbar-custom">
             <div class="container-fluid">
@@ -198,15 +206,207 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¡Bienvenido!</h1>
                     
                 </div>
+
                 <div class="clearfix"></div>
-                
-                
             </div>
-            
-        </div>
+         </div>
+        <!--end Topbar -->
+    <!--</header>-->
+    <!--Menu-->
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    <!--<header id="topnav">-->
         
-        <!-- end Topbar -->
+            <div class="container-fluid">
+                <div id="navigation">
+                    <!-- Navigation Menu-->
+                    <ul class="navigation-menu">
+
+                        <li class="has-submenu">
+                            <a href="#">
+                                <i class="la la-cube"></i>Cuenta <div class="arrow-down"></div></a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="perfil">Perfil</a>
+                                </li>
+                                <li>
+                                    <a href="calendario">Calendario</a>
+                                </li>
+                                <li>
+                                    <a href="contactos">Contactos</a>
+                                </li>
+                                <li>
+                                    <a href="historialTratamientos">Historial Tratamientos</a>
+                                </li>
+                              <!-- <li class="has-submenu">
+                                    <a href="#">Correo <div class="arrow-down"></div></a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="email-inbox.html">Bandeja de entrada</a>
+                                        </li>
+                                        <li>
+                                            <a href="email-read.html">Leer Email</a>
+                                        </li>
+                                        <li>
+                                            <a href="email-compose.html">Redactar Email</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>-->
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="#"> <i class="la la-briefcase"></i>Elements <div class="arrow-down"></div></a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="tratamientos">Tratamientos</a>
+                                </li>
+                                <li>
+                                    <a href="formulario">Registrar cita</a>
+                                </li>
+                                <li>
+                                    <a href="ui-tabs-accordions.html">Ubicaciones de Clinicas</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="#">
+                                <i class="la la-diamond"></i>Components <div class="arrow-down"></div></a>
+                            <ul class="submenu">
+                                <li class="has-submenu">
+                                    <a href="#"><i class="fe-bookmark mr-1"></i> Editar inventario<div class="arrow-down"></div></a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="formulario">Agregar material</a>
+                                        </li>
+                                        <li>
+                                            <a href="formulario">Editar material</a>
+                                        </li>
+                                        <li>
+                                            <a href="formulario">Eliminar material</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a href="#"><i class="fe-grid mr-1"></i> Listas <div class="arrow-down"></div></a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="inventario">Materiales</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Graficas <div class="arrow-down"></div></a>
+                                    <ul class="submenu">
+                                        
+                                        <li>
+                                            <a href="charts-brite.html">Grafica de barras</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- End navigation menu -->
+
+                    <div class="clearfix"></div>
+                </div>
+                <!-- end #navigation -->
+            </div>
+            <!-- end container -->
+
+
     </header>
-    
-</body>
-</html>
+
+    <!--Calendario-->
+    <div class="wrapper">
+      <div class="container">
+        <div class="left">
+          <div class="calendar">
+            <div class="month">
+              <i class="fas fa-angle-left prev"></i>
+              <div class="date">december 2015</div>
+              <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="weekdays">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="days"></div>
+            <div class="goto-today">
+              <div class="goto">
+                <input type="text" placeholder="mm/yyyy" class="date-input" />
+                <button class="goto-btn">Go</button>
+              </div>
+              <button class="today-btn">Today</button>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="today-date">
+            <div class="event-day">wed</div>
+            <div class="event-date">12th december 2022</div>
+          </div>
+          <div class="events"></div>
+          <div class="add-event-wrapper">
+            <div class="add-event-header">
+              <div class="title">Add Event</div>
+              <i class="fas fa-times close"></i>
+            </div>
+            <div class="add-event-body">
+              <div class="add-event-input">
+                <input type="text" placeholder="Event Name" class="event-name" />
+              </div>
+              <div class="add-event-input">
+                <input
+                  type="text"
+                  placeholder="Event Time From"
+                  class="event-time-from"
+                />
+              </div>
+              <div class="add-event-input">
+                <input
+                  type="text"
+                  placeholder="Event Time To"
+                  class="event-time-to"
+                />
+              </div>
+            </div>
+            <div class="add-event-footer">
+              <button class="add-event-btn">Add Event</button>
+            </div>
+          </div>
+        </div>
+        <button class="add-event">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+
+      <div class="credits">
+        <p>
+          Crafted with ❤️ by
+          <a href="https://youtu.be/6EVgmpm4z5U" target="_blank">Open Source Coding</a>
+        </p>
+      </div>
+
+      <script src="{!! asset('style/assets/js/script.js') !!}"></script>
+
+    </div>
+
+
+  </body>
+  </html>
+

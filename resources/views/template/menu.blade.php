@@ -22,15 +22,21 @@
 
                         <li class="has-submenu">
                             <a href="#">
-                                <i class="la la-cube"></i>Aplicaciones <div class="arrow-down"></div></a>
+                                <i class="la la-cube"></i>Cuenta <div class="arrow-down"></div></a>
                             <ul class="submenu">
                                 <li>
-                                    <a href="apps-calendar.html">Calendario</a>
+                                    <a href="perfil">Perfil</a>
                                 </li>
                                 <li>
-                                    <a href="apps-contacts.html">Contactos</a>
+                                    <a href="calendario">Calendario</a>
                                 </li>
-                                <li class="has-submenu">
+                                <li>
+                                    <a href="contactos">Contactos</a>
+                                </li>
+                                <li>
+                                    <a href="historialTratamientos">Historial Tratamientos</a>
+                                </li>
+                               <!-- <li class="has-submenu">
                                     <a href="#">Correo <div class="arrow-down"></div></a>
                                     <ul class="submenu">
                                         <li>
@@ -44,7 +50,7 @@
                                         </li>
                                         
                                     </ul>
-                                </li>
+                                </li>-->
                             </ul>
                         </li>
 
@@ -52,10 +58,13 @@
                             <a href="#"> <i class="la la-briefcase"></i>Elements <div class="arrow-down"></div></a>
                             <ul class="submenu">
                                 <li>
-                                    <a href="ui-cards.html">Cards</a>
+                                    <a href="tratamientos">Tratamientos</a>
                                 </li>
                                 <li>
-                                    <a href="ui-tabs-accordions.html">Tabs & Accordions</a>
+                                    <a href="formulario">Registrar cita</a>
+                                </li>
+                                <li>
+                                    <a href="ui-tabs-accordions.html">Ubicaciones de Clinicas</a>
                                 </li>
                             </ul>
                         </li>
@@ -65,26 +74,26 @@
                                 <i class="la la-diamond"></i>Components <div class="arrow-down"></div></a>
                             <ul class="submenu">
                                 <li class="has-submenu">
-                                    <a href="#"><i class="fe-bookmark mr-1"></i> Formularios <div class="arrow-down"></div></a>
+                                    <a href="#"><i class="fe-bookmark mr-1"></i> Editar inventario<div class="arrow-down"></div></a>
                                     <ul class="submenu">
                                         <li>
-                                            <a href="forms-validation.html">Validation</a>
+                                            <a href="formulario">Agregar material</a>
                                         </li>
                                         <li>
-                                            <a href="forms-pickers.html">Pickers</a>
+                                            <a href="formulario">Editar material</a>
                                         </li>
-                                        
+                                        <li>
+                                            <a href="formulario">Eliminar material</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
-                                    <a href="#"><i class="fe-grid mr-1"></i> Inventario <div class="arrow-down"></div></a>
+                                    <a href="#"><i class="fe-grid mr-1"></i> Listas <div class="arrow-down"></div></a>
                                     <ul class="submenu">
                                         <li>
-                                            <a href="tables-editable.html">Editable Tables</a>
+                                            <a href="inventario">Materiales</a>
                                         </li>
-                                        <li>
-                                            <a href="tables-tablesaw.html">Tablesaw Tables</a>
-                                        </li>
+                                        
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
@@ -95,14 +104,6 @@
                                             <a href="charts-brite.html">Grafica de barras</a>
                                         </li>
                                         
-                                    </ul>
-                                </li>
-                                <li class="has-submenu">
-                                    <a href="#"><i class="fe-map mr-1"></i> Clinicas <div class="arrow-down"></div></a>
-                                    <ul class="submenu">
-                                        <li>
-                                            <a href="maps-google.html">Ubicaciones</a>
-                                        </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -117,6 +118,7 @@
             <!-- end container -->
 
 
+       
     </header>
     
 </body>

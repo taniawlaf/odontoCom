@@ -23,9 +23,19 @@ Route::get('/usuarios', function(){
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/inventario', [App\Http\Controllers\InventarioController::class, 'inventario_control']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/formulario', [App\Http\Controllers\FormularioController::class, 'form_control']);
+
+Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'perfil_control']);
+
+Route::get('/calendario', [App\Http\Controllers\CalendarioController::class, 'calendario_control']);
+
+Route::get('/historialTratamientos', [App\Http\Controllers\HistorialTratamientosController::class, 'historial_tratamientos_control']);
+
+Route::get('/contactos', [App\Http\Controllers\ContactosController::class, 'contactos_control']);
+
+Route::get('/tratamientos', [App\Http\Controllers\TratamientosController::class, 'tratamientos_control']);
 
 /*GET
 POST:GUARDAR
