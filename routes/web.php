@@ -21,9 +21,18 @@ Route::get('/usuarios', function(){
     return view('template.master');
 });
 
+Route::get('/master2', function() {
+    return view('template.masterHeredado');
+});
+
+Route::get('/master3', function() {
+    return view('template.masterHeredado2');
+});
+
 Auth::routes();
 
 Route::get('/inventario', [App\Http\Controllers\InventarioController::class, 'inventario_control']);
+
 
 Route::get('/formulario', [App\Http\Controllers\FormularioController::class, 'form_control']);
 
@@ -36,6 +45,14 @@ Route::get('/historialTratamientos', [App\Http\Controllers\HistorialTratamientos
 Route::get('/contactos', [App\Http\Controllers\ContactosController::class, 'contactos_control']);
 
 Route::get('/tratamientos', [App\Http\Controllers\TratamientosController::class, 'tratamientos_control']);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/testing',[App\Http\Controllers\MaterialesController::class, 'index']);
+//Route::get('/material/create',[App\Http\Controllers\MaterialesController::class, 'create']);
+Route::get('/material',[App\Http\Controllers\MaterialesController::class,'index']);
+Route::get('/material/create',[App\Http\Controllers\MaterialesController::class,'create']);
+Route::post('/material/store',[App\Http\Controllers\MaterialesController::class,'saveRecord']);
+
 
 /*GET
 POST:GUARDAR
