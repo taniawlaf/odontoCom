@@ -21,6 +21,14 @@ Route::get('/usuarios', function(){
     return view('template.master');
 });
 
+Route::get('/master2', function() {
+    return view('template.masterHeredado');
+});
+
+Route::get('/master3', function() {
+    return view('template.masterHeredado2');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
