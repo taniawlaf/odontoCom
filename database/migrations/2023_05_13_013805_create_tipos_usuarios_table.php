@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('tipos_usuarios', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre')->nullable(false);
-            $table->string('descripcion')->nullable(false);
+            $table->integer('nivel')->nullable(false);
             $table->integer('status')->nullable(false);
             $table->timestamps();
         });

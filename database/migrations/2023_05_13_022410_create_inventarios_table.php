@@ -19,7 +19,9 @@ return new class extends Migration
                 $table->integer('stock')->nullable(false);
                 //$table->integer('id_material')->unsigned();
                 $table->unsignedBigInteger('id_material');
+                $table->unsignedBigInteger('id_usuario');
                 $table->foreign('id_material')->references('id')->on('materiales');
+                $table->foreign('id_usuario')->references('id')->on('usuarios');
                 $table->timestamps();
         });
     }
