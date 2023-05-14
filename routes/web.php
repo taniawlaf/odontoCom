@@ -44,6 +44,8 @@ Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'perfil_con
 
 Route::get('/calendario', [App\Http\Controllers\CalendarioController::class, 'calendario_control']);
 
+Route::get('/clinicas', [App\Http\Controllers\ClinicasController::class, 'clinicas_control']);
+
 Route::get('/historialTratamientos', [App\Http\Controllers\HistorialTratamientosController::class, 'historial_tratamientos_control']);
 
 Route::get('/contactos', [App\Http\Controllers\ContactosController::class, 'contactos_control']);

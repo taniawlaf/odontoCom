@@ -1,4 +1,4 @@
-@extends('master')
+@extends('template.master')
 @section('contenido_central')
 <div class="wrapper">
     <div class="container-fluid">

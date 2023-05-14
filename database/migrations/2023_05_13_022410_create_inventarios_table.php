@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('inventarios', function (Blueprint $table) {
             $table->bigIncrements('id');
                 $table->integer('existencia')->nullable(false);
-                $table->integer('entrada')->nullable(false);
-                $table->integer('salida')->nullable(false);
                 $table->integer('stock')->nullable(false);
                 //$table->integer('id_material')->unsigned();
                 $table->unsignedBigInteger('id_material');

@@ -14,15 +14,13 @@ use Illuminate\Database\Eloquent\Model;
  * 
  * @property int $id
  * @property int $existencia
- * @property int $entrada
- * @property int $salida
  * @property int $stock
  * @property int $id_material
  * @property int $id_usuario
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * 
- * @property Materiale $materiale
+ * @property Materiales $materiales
  * @property Usuario $usuario
  *
  * @package App\Models
@@ -33,8 +31,6 @@ class Inventario extends Model
 
 	protected $casts = [
 		'existencia' => 'int',
-		'entrada' => 'int',
-		'salida' => 'int',
 		'stock' => 'int',
 		'id_material' => 'int',
 		'id_usuario' => 'int'
@@ -42,8 +38,6 @@ class Inventario extends Model
 
 	protected $fillable = [
 		'existencia',
-		'entrada',
-		'salida',
 		'stock',
 		'id_material',
 		'id_usuario'

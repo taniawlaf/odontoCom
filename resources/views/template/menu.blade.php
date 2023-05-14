@@ -64,7 +64,7 @@
                                     <a href="formulario">Registrar cita</a>
                                 </li>
                                 <li>
-                                    <a href="ui-tabs-accordions.html">Ubicaciones de Clinicas</a>
+                                    <a href="clinicas">Ubicaciones de Clinicas</a>
                                 </li>
                             </ul>
                         </li>
