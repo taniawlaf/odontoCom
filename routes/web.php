@@ -1,7 +1,11 @@
 <?php
 
+use App\Mail\EnviarCorreo;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
+use Illuminate\Support\Facades\Mail;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +41,14 @@ Route::get('/contactos', [App\Http\Controllers\ContactosController::class, 'cont
 
 Route::get('/tratamientos', [App\Http\Controllers\TratamientosController::class, 'tratamientos_control']);
 
+Route::get('/',function(){
+    return view('template.correo');
+});
+
+Route::post('enviarcorreo', function() {
+    Mail::to('taniapao.tp@gmail.com')->send(new EnviarCorreo);
+    return"Correo enviado exitosamente";
+})->name('enviarcorreo');
 /*GET
 POST:GUARDAR
 PUT:ACTUALIZAR
