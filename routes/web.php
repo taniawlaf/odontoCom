@@ -52,6 +52,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/material',[App\Http\Controllers\MaterialesController::class,'index']);
 Route::get('/material/create',[App\Http\Controllers\MaterialesController::class,'create']);
 Route::post('/material/store',[App\Http\Controllers\MaterialesController::class,'saveRecord']);
+Route::post('/formulario/create',[App\Http\Controllers\FormularioController::class,'save_record']);
 
 
 /*GET

@@ -13,6 +13,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
-        'http://127.0.0.1:8000/material/store'
+        'http://127.0.0.1:8000/material/store',
+        'http://127.0.0.1:8000/formulario/create'
     ];
 }
