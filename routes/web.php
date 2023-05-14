@@ -25,9 +25,18 @@ Route::get('/usuarios', function(){
     return view('template.master');
 });
 
+Route::get('/master2', function() {
+    return view('template.masterHeredado');
+});
+
+Route::get('/master3', function() {
+    return view('template.masterHeredado2');
+});
+
 Auth::routes();
 
 Route::get('/inventario', [App\Http\Controllers\InventarioController::class, 'inventario_control']);
+
 
 Route::get('/formulario', [App\Http\Controllers\FormularioController::class, 'form_control']);
 
@@ -41,6 +50,7 @@ Route::get('/contactos', [App\Http\Controllers\ContactosController::class, 'cont
 
 Route::get('/tratamientos', [App\Http\Controllers\TratamientosController::class, 'tratamientos_control']);
 
+
 Route::get('/',function(){
     return view('template.correo');
 });
@@ -49,6 +59,17 @@ Route::post('enviarcorreo', function() {
     Mail::to('taniapao.tp@gmail.com')->send(new EnviarCorreo);
     return"Correo enviado exitosamente";
 })->name('enviarcorreo');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/testing',[App\Http\Controllers\MaterialesController::class, 'index']);
+//Route::get('/material/create',[App\Http\Controllers\MaterialesController::class, 'create']);
+Route::get('/material',[App\Http\Controllers\MaterialesController::class,'index']);
+Route::get('/material/create',[App\Http\Controllers\MaterialesController::class,'create']);
+Route::post('/material/store',[App\Http\Controllers\MaterialesController::class,'saveRecord']);
+Route::post('/formulario/create',[App\Http\Controllers\FormularioController::class,'save_record']);
+
+
+
 /*GET
 POST:GUARDAR
 PUT:ACTUALIZAR

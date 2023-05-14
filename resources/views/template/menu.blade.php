@@ -30,9 +30,9 @@
                                 <li>
                                     <a href="calendario">Calendario</a>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a href="contactos">Contactos</a>
-                                </li>
+                                </li>-->
                                 <li>
                                     <a href="historialTratamientos">Historial Tratamientos</a>
                                 </li>
