@@ -91,6 +91,28 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="has-submenu">
+                            <a href="#">
+                                <i class="la la-diamond"></i>Cruds <div class="arrow-down"></div></a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="{!! asset('cruds') !!}"> 1</a>
+                                </li>
+                                <li>
+                                    <a href="inventario"> Materiales </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Graficas <div class="arrow-down"></div></a>
+                                    <ul class="submenu">
+                                        
+                                        <li>
+                                            <a href="charts-brite.html">Grafica de barras</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                     <!-- End navigation menu -->
 

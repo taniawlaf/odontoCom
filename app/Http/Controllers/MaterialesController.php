@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Materiale;
+
 use Illuminate\Http\RedirectResponse;
 class MaterialesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+   /*public function index()
     {
         //
         //$materiales = Materiales::all();
@@ -21,22 +22,15 @@ class MaterialesController extends Controller
         $materialNuevo->descripcion = 'Okas';
         $materialNuevo->status = 1;
         $materialNuevo->save();*/
-        return view('template.masterHeredado');
+       // return view('template.masterHeredado');
         /*return view('template.masterHeredado',[
             'materiales'=>$materiales
         ]);*/
-    }
+   // }
 
     /**
      * Show the form for creating a new resource.
-     */
-    public function create( )
-    {
-        //
-        return view('template.create');
-    }
 
-    /**
      * Store a newly created resource in storage.
      */
     public function saveRecord(Request $request)
@@ -51,35 +45,64 @@ class MaterialesController extends Controller
         return "everything oki";
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function index()
     {
-        //
-    }
+          
+        $materiales = Materiale::where('status', 1)
+                  ->orderBy('nombre')->get();          
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
+        return view('materiales.index')->with('materiales', $materiales);
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    
+    
+    
+    public function create()
     {
-        //
+        return view('materiales.create');
+    }    
+
+    
+
+    public function store(Request $request)
+    {
+        $datos = $request->all();
+        Materiale::create($datos);
+        return redirect('/materiales');
+    }
+    
+    
+    
+    public function show($id)
+    {
+        $material = Materiale::find($id);
+        return view('materiales.read')->with('material', $material);
+    }
+    
+    
+    
+    public function edit($id)
+    {
+        $material = Materiale::find($id);
+        return view('materiales.edit')->with('material', $material);
+    }
+    
+    
+    
+    public function update(Request $request, $id)
+    {
+        $datos = $request->all();
+        $material = Materiale::find($id);
+        $material->update($datos);
+        return redirect('/materiales');
+    }
+    
+    public function destroy($id)
+    {
+        $material = Materiale::find($id);
+        $material->status = 0;
+        $material->save();
+        
+        return redirect('/materiales');
     }
 }

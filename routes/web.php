@@ -4,7 +4,19 @@ use App\Mail\EnviarCorreo;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use Illuminate\Support\Facades\Mail;
-
+use App\Http\Controllers\Archivos_TratamientosController;
+use App\Http\Controllers\ClinicasController;
+use App\Http\Controllers\ConsultoriosController;
+use App\Http\Controllers\EntidadesController;
+use App\Http\Controllers\CitasController; //citas
+use App\Http\Controllers\InventarioController;
+use App\Http\Controllers\MaterialesController;
+use App\Http\Controllers\MunicipiosController;
+use App\Http\Controllers\PaisesController;
+use App\Http\Controllers\Tipos_tratamientoController;
+use App\Http\Controllers\Tipos_usuarioController;
+use App\Http\Controllers\TratamientosController;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,3 +99,23 @@ Route::get('',function(){
         ->with('listado',$listado)
 });
 */
+
+//-----------------------------------------------------------------------------------------------------
+
+Route::resource('archivosTratamientos',Archivos_TratamientosController::class );
+Route::resource('clinicas',ClinicasController::class );
+Route::resource('consultorios',ConsultoriosController::class );
+Route::resource('entidades',EntidadesController::class );
+Route::resource('citas',CitasController::class );//citas
+Route::resource('inventario',InventarioController::class );
+Route::resource('materiales',MaterialesController::class );
+Route::resource('municipios',MunicipiosController::class );
+Route::resource('paises',PaisesController::class );
+Route::resource('tiposTratamiento',Tipos_tratamientoController::class );
+Route::resource('tratamiento',TratamientoController::class );
+Route::resource('tiposUsuario',Tipos_usuarioController::class );
+Route::resource('usuarios',UsuariosController::class );
+
+Route::get('cruds',function(){
+    return view('Cruds.cruds');
+});
