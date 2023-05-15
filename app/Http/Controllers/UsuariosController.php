@@ -78,17 +78,17 @@ class UsuariosController extends Controller
     public function update(Request $request, $id)
     {
         $datos = $request->all();
-        $Usuario = Usuario::find($id);
-        $Usuario->update($datos);
+        $usuario = Usuario::find($id);
+        $usuario->update($datos);
         return redirect('/usuarios');
     }
     
     
     public function destroy($id)
     {
-        $Usuario = Usuario::find($id);
-        $Usuario->status = 0;
-        $Usuario->save();
+        $usuario = Usuario::find($id);
+        $usuario->status = 0;
+        $usuario->save();
         return redirect('/usuarios');
     }
 }

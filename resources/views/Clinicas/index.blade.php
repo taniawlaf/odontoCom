@@ -29,7 +29,7 @@
             <td>{!! $clinicas->numero !!}</td>
             <td>{!! $clinicas->nombre !!}</td>
             <td>
-                <a href="{!! 'clinica/'.$clinicas->id !!}">Detalle</a>                 
+                <a href="{!! 'clinicas/'.$clinicas->id !!}">Detalle</a>                 
                 <a href="{!! 'clinica/'.$clinicas->id.'/edit' !!}">Editar</a>
 
 
