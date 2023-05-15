@@ -26,8 +26,8 @@
                     <tbody>
                         @foreach ($arrayInventarios as $item)
                             <tr>
-                                <td>{{$item->material->nombre}}</td>
-                                <td>{{$item->material->descripcion}}</td>
+                                <td>{{$item->materiale->nombre}}</td>
+                                <td>{{$item->materiale->descripcion}}</td>
                                 <td>{{$item->existencia}}</td>
                             </tr>
                         @endforeach

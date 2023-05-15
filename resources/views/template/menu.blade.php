@@ -73,30 +73,13 @@
                             <a href="#">
                                 <i class="la la-diamond"></i>Components <div class="arrow-down"></div></a>
                             <ul class="submenu">
-                                <li class="has-submenu">
-                                    <a href="#"><i class="fe-bookmark mr-1"></i> Editar inventario<div class="arrow-down"></div></a>
-                                    <ul class="submenu">
-                                        <li>
-                                            <a href="formulario">Agregar material</a>
-                                        </li>
-                                        <li>
-                                            <a href="formulario">Editar material</a>
-                                        </li>
-                                        <li>
-                                            <a href="formulario">Eliminar material</a>
-                                        </li>
-                                    </ul>
+                                <li>
+                                    <a href="formulario"> Editar inventario</a>
                                 </li>
-                                <li class="has-submenu">
-                                    <a href="#"><i class="fe-grid mr-1"></i> Listas <div class="arrow-down"></div></a>
-                                    <ul class="submenu">
-                                        <li>
-                                            <a href="inventario">Materiales</a>
-                                        </li>
-                                        
-                                    </ul>
+                                <li>
+                                    <a href="inventario"> Materiales </a>
                                 </li>
-                                <li class="has-submenu">
+                                <li>
                                     <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Graficas <div class="arrow-down"></div></a>
                                     <ul class="submenu">
                                         

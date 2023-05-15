@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Materiales;
+use App\Models\Materiale;
 use Illuminate\Http\RedirectResponse;
 class MaterialesController extends Controller
 {
@@ -16,7 +16,7 @@ class MaterialesController extends Controller
         //$materiales = Materiales::all();
         //var_dump($materiales);
         //die();
-        $materialNuevo = new Materiales();
+        $materialNuevo = new Materiale();
         /*$materialNuevo->nombre = 'Gatito';
         $materialNuevo->descripcion = 'Okas';
         $materialNuevo->status = 1;
@@ -42,7 +42,7 @@ class MaterialesController extends Controller
     public function saveRecord(Request $request)
     {
         //
-        $materialNuevo = new Materiales();
+        $materialNuevo = new Materiale();
         $materialNuevo->nombre = $request->input('nombre');
         $materialNuevo->descripcion = $request->input('descripcion');
         $materialNuevo->status = $request->input('status');

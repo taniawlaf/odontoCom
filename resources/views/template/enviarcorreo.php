@@ -1,1 +1,1 @@
-<h1>Correo enviado desde laravel</h1>
+<h1>Correo enviado desde laravel, hola mana</h1>

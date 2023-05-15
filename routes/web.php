@@ -50,6 +50,8 @@ Route::get('/historialTratamientos', [App\Http\Controllers\HistorialTratamientos
 
 Route::get('/contactos', [App\Http\Controllers\ContactosController::class, 'contactos_control']);
 
+Route::get('/dentistas/{id?}', [App\Http\Controllers\DentistasController::class, 'dentistas_control']);
+
 Route::get('/tratamientos', [App\Http\Controllers\TratamientosController::class, 'tratamientos_control']);
 
 
@@ -58,7 +60,7 @@ Route::get('/',function(){
 });
 
 Route::post('enviarcorreo', function() {
-    Mail::to('taniapao.tp@gmail.com')->send(new EnviarCorreo);
+    Mail::to('camila.mt1310@gmail.com')->send(new EnviarCorreo);
     return"Correo enviado exitosamente";
 })->name('enviarcorreo');
 
