@@ -60,8 +60,8 @@ Route::get('/',function(){
 });
 
 Route::post('enviarcorreo', function() {
-    Mail::to('camila.mt1310@gmail.com')->send(new EnviarCorreo);
-    return"Correo enviado exitosamente";
+    Mail::to('taniamunozdev@gmail.com')->send(new EnviarCorreo);
+    return view('template.correo');
 })->name('enviarcorreo');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,1 +1,2 @@
-<h1>Correo enviado desde laravel, hola mana</h1>
+<img src="style/assets/images/logo.png" alt="" height="22">
+<h2>Correo enviado desde OdontoCom, hola mana</h2>
