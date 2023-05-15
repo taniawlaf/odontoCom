@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Listado de consultorio</h1>
-    <a href="consultorio/create">Crear un nueva Entidad</a>
+    <a href="consultorios/create">Crear un nueva Entidad</a>
     <table>
         <tr>
             <th>ID</th>

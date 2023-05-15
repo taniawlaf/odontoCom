@@ -20,6 +20,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id_tipo_tratamiento
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property int $status
  * 
  * @property TiposTratamiento $tipos_tratamiento
  * @property Collection|ArchivosTratamiento[] $archivos_tratamientos
@@ -40,7 +41,8 @@ class Tratamiento extends Model
 		'nombre',
 		'costo',
 		'descripcion',
-		'id_tipo_tratamiento'
+		'id_tipo_tratamiento',
+		'status'
 	];
 
 	public function tipos_tratamiento()

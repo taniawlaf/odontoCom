@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Listado de tratamientos</h1>
-    <a href="tratamientos/create">Crear un nueva tratamiento</a>
+    <a href="tratamiento/create">Crear un nueva tratamiento</a>
     <table>
         <tr>
             <th>ID</th>
@@ -24,11 +24,11 @@
             <td>{!! $tratamiento->costo !!}</td>           
             <td>{!! $tratamiento->descripcion !!}</td>
             <td>
-                <a href="{!! 'tratamientos/'.$tratamiento->id !!}">Detalle</a>                 
-                <a href="{!! 'tratamientos/'.$tratamiento->id.'/edit' !!}">Editar</a>
+                <a href="{!! 'tratamiento/'.$tratamiento->id !!}">Detalle</a>                 
+                <a href="{!! 'tratamiento/'.$tratamiento->id.'/edit' !!}">Editar</a>
 
 
-                {!! Form::open(['method' => 'DELETE' , 'url' => '/tratamientos/'.$tratamiento->id]) !!}
+                {!! Form::open(['method' => 'DELETE' , 'url' => '/tratamiento/'.$tratamiento->id]) !!}
                     {!! Form::submit('Eliminar') !!}
                 {!! Form::close() !!}
             </td>

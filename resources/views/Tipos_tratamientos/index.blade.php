@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Listado de tiposTratamientos</h1>
-    <a href="tiposTratamientos/create">Crear un nueva tipo</a>
+    <a href="tiposTratamiento/create">Crear un nueva tipo</a>
     <table>
         <tr>
             <th>ID</th>
@@ -22,11 +22,11 @@
             <td>{!! $tipo->semestre!!}</td>           
             <td>{!! $tipo->status !!}</td>
             <td>
-                <a href="{!! 'tiposTratamientos/'.$tipo->id !!}">Detalle</a>                 
-                <a href="{!! 'tiposTratamientos/'.$tipo->id.'/edit' !!}">Editar</a>
+                <a href="{!! 'tiposTratamiento/'.$tipo->id !!}">Detalle</a>                 
+                <a href="{!! 'tiposTratamiento/'.$tipo->id.'/edit' !!}">Editar</a>
 
 
-                {!! Form::open(['method' => 'DELETE' , 'url' => '/tiposTratamientos/'.$tipo->id]) !!}
+                {!! Form::open(['method' => 'DELETE' , 'url' => '/tiposTratamiento/'.$tipo->id]) !!}
                     {!! Form::submit('Eliminar') !!}
                 {!! Form::close() !!}
             </td>

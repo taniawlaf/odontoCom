@@ -22,7 +22,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id_entidad
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * 
+ * @property int $status
+
  * @property Entidade $entidade
  * @property Municipio $municipio
  * @property Paise $paise
@@ -38,7 +39,8 @@ class Clinica extends Model
 		'numero' => 'int',
 		'id_pais' => 'int',
 		'id_municipio' => 'int',
-		'id_entidad' => 'int'
+		'id_entidad' => 'int',
+		'status' => 'int'
 	];
 
 	protected $fillable = [
@@ -47,7 +49,8 @@ class Clinica extends Model
 		'numero',
 		'id_pais',
 		'id_municipio',
-		'id_entidad'
+		'id_entidad',
+		'status'
 	];
 
 	public function entidade()

@@ -19,21 +19,21 @@
             <th>Acciones</th>
             
         </tr>
-        @foreach($clinicas as $clinica)
+        @foreach($clinica as $clinicas)
         <tr>
-            <td>{!! $clinica->id !!}</td>
-            <td>{!! $clinica->id_pais !!}</td>
-            <td>{!! $clinica->id_entidad !!}</td>
-            <td>{!! $clinica->id_municipio!!}</td>
-            <td>{!! $clinica->institucion!!}</td>           
-            <td>{!! $clinica->numero !!}</td>
-            <td>{!! $clinica->nombre !!}</td>
+            <td>{!! $clinicas->id !!}</td>
+            <td>{!! $clinicas->id_pais !!}</td>
+            <td>{!! $clinicas->id_entidad !!}</td>
+            <td>{!! $clinicas->id_municipio!!}</td>
+            <td>{!! $clinicas->institucion!!}</td>           
+            <td>{!! $clinicas->numero !!}</td>
+            <td>{!! $clinicas->nombre !!}</td>
             <td>
-                <a href="{!! 'clinica/'.$clinica->id !!}">Detalle</a>                 
-                <a href="{!! 'clinica/'.$clinica->id.'/edit' !!}">Editar</a>
+                <a href="{!! 'clinica/'.$clinicas->id !!}">Detalle</a>                 
+                <a href="{!! 'clinica/'.$clinicas->id.'/edit' !!}">Editar</a>
 
 
-                {!! Form::open(['method' => 'DELETE' , 'url' => '/clinica/'.$clinica->id]) !!}
+                {!! Form::open(['method' => 'DELETE' , 'url' => '/clinica/'.$clinicas->id]) !!}
                     {!! Form::submit('Eliminar') !!}
                 {!! Form::close() !!}
             </td>

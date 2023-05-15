@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id_usuario
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property int $status
  * 
  * @property Materiale $material
  * @property Usuario $usuario
@@ -33,14 +34,16 @@ class Inventario extends Model
 		'existencia' => 'int',
 		'stock' => 'int',
 		'id_material' => 'int',
-		'id_usuario' => 'int'
+		'id_usuario' => 'int',
+		'status' => 'int'
 	];
 
 	protected $fillable = [
 		'existencia',
 		'stock',
 		'id_material',
-		'id_usuario'
+		'id_usuario',
+		'status'
 	];
 
 	public function materiale()

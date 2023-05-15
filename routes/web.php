@@ -112,7 +112,7 @@ Route::resource('materiales',MaterialesController::class );
 Route::resource('municipios',MunicipiosController::class );
 Route::resource('paises',PaisesController::class );
 Route::resource('tiposTratamiento',Tipos_tratamientoController::class );
-Route::resource('tratamiento',TratamientoController::class );
+Route::resource('tratamiento',TratamientosController::class );
 Route::resource('tiposUsuario',Tipos_usuarioController::class );
 Route::resource('usuarios',UsuariosController::class );
 

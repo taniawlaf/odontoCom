@@ -21,7 +21,7 @@ class InventarioController extends Controller
     {
         $inventario = Inventario::where('status', 1)
                   ->orderBy('id_material')
-                  ->orderBy('nombre')->get();          
+                  ->orderBy('id_usuario')->get();          
         return view('Inventarios.index')->with('inventarios', $inventario);
     }
     

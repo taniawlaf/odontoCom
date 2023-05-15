@@ -8,13 +8,13 @@ use App\Models\Cita;
 use App\Models\Tratamiento;
 use App\Models\Usuario;
 
-class citaController extends Controller
+class CitasController extends Controller
 {
     public function index()
     {
         $cita = Cita::where('status', 1)
                   ->orderBy('id_usuario')
-                  ->orderBy('nombre')->get();          
+                  ->orderBy('fecha')->get();          
         return view('Citas.index')->with('cita', $cita);
     }
     

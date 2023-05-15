@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Listado de inventarios</h1>
-    <a href="inventarios/create">Crear un nueva inventario</a>
+    <a href="inventario/create">Crear un nueva inventario</a>
     <table>
         <tr>
             <th>ID</th>
@@ -24,11 +24,11 @@
             <td>{!! $inventario->existencia !!}</td>           
             <td>{!! $inventario->stock !!}</td>
             <td>
-                <a href="{!! 'inventarios/'.$inventario->id !!}">Detalle</a>                 
-                <a href="{!! 'inventarios/'.$inventario->id.'/edit' !!}">Editar</a>
+                <a href="{!! 'inventario/'.$inventario->id !!}">Detalle</a>                 
+                <a href="{!! 'inventario/'.$inventario->id.'/edit' !!}">Editar</a>
 
 
-                {!! Form::open(['method' => 'DELETE' , 'url' => '/inventarios/'.$inventario->id]) !!}
+                {!! Form::open(['method' => 'DELETE' , 'url' => '/inventario/'.$inventario->id]) !!}
                     {!! Form::submit('Eliminar') !!}
                 {!! Form::close() !!}
             </td>

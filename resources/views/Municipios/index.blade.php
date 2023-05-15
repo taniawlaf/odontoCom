@@ -21,8 +21,8 @@
         <tr>
             <td>{!! $municipio->id !!}</td>
             <td>{!! $municipio->id_entidad !!}</td>
-            <td>{!! $municipio->entidades->nombre !!}</td>
-            <td>{!! $municipio->entidades->paises->nombre !!}</td>
+            <td>{!! $municipio->entidade->nombre !!}</td>
+            <td>{!! $municipio->entidade->paise->nombre !!}</td>
             <td>{!! $municipio->nombre !!}</td>             
             <td>{!! $municipio->status !!}</td>
             <td>

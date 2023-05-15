@@ -20,7 +20,6 @@
         <tr>
             <td>{!! $entidad->id !!}</td>
             <td>{!! $entidad->id_pais !!}</td>
-            <td>{!! $entidad->paises->clave !!}</td>
             <td>{!! $entidad->nombre !!}</td>           
             <td>{!! $entidad->status !!}</td>
             <td>

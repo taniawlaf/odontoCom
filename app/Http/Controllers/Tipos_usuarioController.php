@@ -27,7 +27,7 @@ class Tipos_usuarioController extends Controller
                   ->orderBy('nombre')->get();          
 
 
-        return view('Tipos_usuarios.index')->with('TiposUsuarios', $tiposUsuario);
+        return view('Tipos_usuarios.index')->with('tiposUsuario', $tiposUsuario);
     }
     
     

@@ -21,9 +21,8 @@ class Archivos_TratamientosController extends Controller
     public function index()
     {
         $archivosTratamientos = ArchivosTratamiento::where('status', 1)
-                  ->orderBy('id_tratamiento')
-                  ->orderBy('nombre')->get();          
-        return view('ArchivosTratamientos.index')->with('archivosTratamientos', $archivosTratamientos);
+                  ->orderBy('id_tratamiento')->get();          
+        return view('Archivos_tratamientos.index')->with('archivosTratamientos', $archivosTratamientos);
     }
     
     
@@ -31,7 +30,7 @@ class Archivos_TratamientosController extends Controller
     {
         $tratamiento = Tratamiento::select('id','nombre')
                   ->orderBy('nombre')->get();
-        return view('ArchivosTratamientos.create')
+        return view('Archivos_tratamientos.create')
                 ->with('tratamiento',$tratamiento);
     }
     
@@ -48,7 +47,7 @@ class Archivos_TratamientosController extends Controller
     public function show($id)
     {
         $archivosTratamientos = ArchivosTratamiento::find($id);
-        return view('ArchivosTratamientos.read')->with('archivosTratamientos', $archivosTratamientos);
+        return view('Archivos_tratamientos.read')->with('archivosTratamientos', $archivosTratamientos);
     }
     
     
@@ -57,7 +56,7 @@ class Archivos_TratamientosController extends Controller
         $archivosTratamientos = ArchivosTratamiento::find($id);
         $tratamiento = tratamiento::select('id','nombre')
                   ->orderBy('nombre')->get();
-        return view('ArchivosTratamientos.edit')
+        return view('Archivos_tratamientos.edit')
                ->with('archivosTratamientos', $archivosTratamientos)
                ->with('tratamiento',$tratamiento);
     }

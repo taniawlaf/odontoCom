@@ -15,7 +15,7 @@ class ConsultoriosController extends Controller
     {
         $consultorio = consultorio::where('status', 1)
                   ->orderBy('id_clinica')
-                  ->orderBy('nombre')->get();          
+                  ->orderBy('numero')->get();          
         return view('Consultorios.index')->with('consultorios', $consultorio);
     }
     

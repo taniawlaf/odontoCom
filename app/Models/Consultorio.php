@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id_clinica
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property int $numero
  * 
  * @property Clinica $clinica
  * @property Usuario $usuario
@@ -31,13 +32,15 @@ class Consultorio extends Model
 	protected $casts = [
 		'status' => 'int',
 		'id_usuario' => 'int',
-		'id_clinica' => 'int'
+		'id_clinica' => 'int',
+		'numero' => 'int'
 	];
 
 	protected $fillable = [
 		'status',
 		'id_usuario',
-		'id_clinica'
+		'id_clinica',
+		'numero'
 	];
 
 	public function clinica()

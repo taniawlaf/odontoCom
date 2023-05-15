@@ -27,7 +27,7 @@ class Tipos_tratamientoController extends Controller
                   ->orderBy('nombre')->get();          
 
 
-        return view('Tipos_tratamientos.index')->with('TiposTratamientos', $tiposTratamientos);
+        return view('Tipos_tratamientos.index')->with('tiposTratamientos', $tiposTratamientos);
     }
     
     
