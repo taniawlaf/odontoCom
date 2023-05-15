@@ -10,7 +10,7 @@ use \App\Models\Clinica;
 class DentistasController extends Controller
 {
     //
-    public function dentistas_control($id=1)
+    public function dentistas_control($id)
 	{   
         $consultorios=Consultorio::with('usuario')->where('id_clinica',$id)->get();
       //  var_dump($consultorios[2]->usuario->nombre);

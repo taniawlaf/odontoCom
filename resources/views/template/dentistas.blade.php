@@ -29,7 +29,7 @@
                         <img src="https://cdn3.vectorstock.com/i/1000x1000/06/87/dentist-tools-circle-icon-vector-25240687.jpg" class="rounded-circle img-thumbnail avatar-xl"
                             alt="profile-image">
 
-                        <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">{{$item->usuario->nombre}} {{$item->usuario->ap_pat}}{{$item->usuario->ap_mat}}</a></h4>
+                        <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">{{$item->usuario->nombre}} {{$item->usuario->ap_pat}} {{$item->usuario->ap_mat}}</a></h4>
                         <p class="text-muted"><i class="mdi mdi-map-marker-outline"></i> {{$item->usuario->paise->nombre}}</p>
 
                         <p class="text-muted mt-3">
