@@ -7,7 +7,7 @@
 <body>
     <h1>Crear clinica</h1>
 
-    {!! Form::open(['url'=>'/cita']) !!}
+    {!! Form::open(['url'=>'/clinicas']) !!}
         
         {!! Form::label ('id_pais','Pais:') !!}
         {!! Form::select ('id_pais', $paises->pluck('nombre','id')->all() , null ,['placeholder'=>'Seleccionar ...']) !!}
@@ -46,7 +46,7 @@
         array('1'=>'Activo','0'=>'Baja') , null ,['placeholder'=>'Seleccionar ...']) !!}
         <br />
         <br />
-        {!! Form::submit('Guardar citas') !!}
+        {!! Form::submit('Guardar clinica') !!}
         {!! Form::close() !!}
 
 

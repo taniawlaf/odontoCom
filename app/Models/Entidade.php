@@ -37,6 +37,7 @@ class Entidade extends Model
 	];
 
 	protected $fillable = [
+		'id',
 		'nombre',
 		'status',
 		'id_pais'

@@ -7,10 +7,9 @@
 <body>
     <h1>Crear Entidad</h1>
 
-    {!! Form::open(['url'=>'/entidades']) !!}
-        
+        {!! Form::open(['url'=>'/entidades']) !!}
+
         {!! Form::label ('id_pais','Pais:') !!}
-        <!-- llave foranea -->
         {!! Form::select ('id_pais', $paises->pluck('nombre','id')->all() , null ,['placeholder'=>'Seleccionar ...']) !!}
         <br />
         <br />

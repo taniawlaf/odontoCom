@@ -7,7 +7,7 @@
 <body>
     <h1>Crear Usuario</h1>
 
-    {!! Form::open(['url'=>'/tiposUsuario']) !!}
+    {!! Form::open(['url'=>'/usuarios']) !!}
        
         {!! Form::label ('id_pais','Pais:') !!}
         {!! Form::select ('id_pais', $paises->pluck('nombre','id')->all() , null ,['placeholder'=>'Seleccionar ...']) !!}
@@ -24,8 +24,8 @@
         <br />
         <br />
         <br />
-        {!! Form::label ('id_tipoUsuario','Usuario:') !!}
-        {!! Form::select ('id_tipoUsuario', $tipoUsuario->pluck('nombre','id')->all() , null ,['placeholder'=>'Seleccionar ...']) !!}
+        {!! Form::label ('id_tipo_usuario','tipoUsuario:') !!}
+        {!! Form::select ('id_tipo_usuario', $tipoUsuario->pluck('nombre','id')->all() , null ,['placeholder'=>'Seleccionar ...']) !!}
         <br />
         <br />
         <br />
@@ -38,8 +38,8 @@
         {!! Form::text ('ap_pat',null,['placeholder'=>'Ingresa apellido paterno del Usuario']) !!}
         <br />
         <br />
-        {!! Form::label ('nombre','apellido materno del Usuario') !!}
-        {!! Form::text ('nombre',null,['placeholder'=>'Ingresa apellidomaterno del Usuario']) !!}
+        {!! Form::label ('ap_mat','apellido materno del Usuario') !!}
+        {!! Form::text ('ap_mat',null,['placeholder'=>'Ingresa apellidomaterno del Usuario']) !!}
         <br />
         <br />
 
@@ -54,12 +54,12 @@
         <br />
 
         {!! Form::label ('username','username del Usuario') !!}
-        {!! Form::email ('username',null,['placeholder'=>'Ingresa username del TiposUsuario']) !!}
+        {!! Form::text ('username',null,['placeholder'=>'Ingresa username del TiposUsuario']) !!}
         <br />
         <br />
 
         {!! Form::label ('password','password del Usuario') !!}
-        {!! Form::email ('password',null,['placeholder'=>'Ingresa password del TiposUsuario']) !!}
+        {!! Form::password ('password',null,['placeholder'=>'Ingresa password del TiposUsuario']) !!}
         <br />
         <br />
 
