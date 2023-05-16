@@ -14,7 +14,7 @@ class InventarioController extends Controller
     public function inventario_control()
 	{
 		$inventarios=Inventario::with(['materiale','usuario'])->get();
-		return view('template.inventario', ['arrayInventarios'=>$inventarios]);
+		return view('template.inventario1', ['arrayInventarios'=>$inventarios]);
 	}
 
 	public function index()

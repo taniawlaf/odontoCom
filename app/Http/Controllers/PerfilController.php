@@ -16,7 +16,7 @@ class PerfilController extends Controller
 		var_dump($usuario[0]->municipio->nombre);
         die();*/
 		//$paisDelUsuario = Paise::where('id',$usuario[0]->id_pais)->get();
-		return view('template.perfil',[
+		return view('template.perfil1',[
 			'usuarios'=>$usuario
 		]);
 	}

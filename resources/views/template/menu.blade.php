@@ -25,10 +25,10 @@
                                 <i class="la la-cube"></i>Cuenta <div class="arrow-down"></div></a>
                             <ul class="submenu">
                                 <li>
-                                    <a href="perfil">Perfil</a>
+                                    <a href="perfil1">Perfil</a>
                                 </li>
                                 <li>
-                                    <a href="calendario">Calendario</a>
+                                    <a href="calendario1">Calendario</a>
                                 </li>
                                 <!--<li>
                                     <a href="contactos">Contactos</a>

@@ -18,7 +18,7 @@ class FormularioController extends Controller
 		->get();
 		//var_dump($usuarios[2]->nombre);
         //die();
-		return view('template.formulario',[
+		return view('template.formulario1',[
 			'tratamientos'=>$tratamientos,
 			'usuarios'=>$usuarios
 		]);

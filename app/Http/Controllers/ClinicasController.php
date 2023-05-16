@@ -14,7 +14,7 @@ class ClinicasController extends Controller
     public function clinicas_control()
 	{
 		$clinicas=Clinica::with(['entidade','municipio','paise'])->get();
-		return view('template.clinicas',['arrayClinicas'=>$clinicas]);
+		return view('template.clinicas1',['arrayClinicas'=>$clinicas]);
 	}
 
 

@@ -21,7 +21,7 @@ class DentistasController extends Controller
 		->get();*/
 		//var_dump($usuarios[2]->nombre);
         //die();
-		return view('template.dentistas',[
+		return view('template.dentistas1',[
 			'consultorio'=>$consultorios,
 			//'dentistas'=>$dentistas
 		]);

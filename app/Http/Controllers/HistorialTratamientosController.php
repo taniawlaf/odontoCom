@@ -20,7 +20,7 @@ class HistorialTratamientosController extends Controller
 		die();*/
 
 		
-		return view('template.historialTratamientos', [
+		return view('template.historialTratamientos1', [
 			'arrayCitas'=>$citas
 		]);
 	}

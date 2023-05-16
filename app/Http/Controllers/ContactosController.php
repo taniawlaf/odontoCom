@@ -9,6 +9,6 @@ class ContactosController extends Controller
     //
     public function contactos_control()
 	{
-		return view('template.contactos');
+		return view('template.contactos1');
 	}
 }
