@@ -1,39 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ver consultorio</title>
-</head>
-<body>
-    <h1>Listado de consultorio</h1>
-    <a href="consultorios/create">Crear un nueva Entidad</a>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>ID usuario</th>
-            <th>ID clinica</th>          
-            <th>Estatus</th>
-            <th>Acciones</th>
-        </tr>
-        @foreach($consultorios as $consultorio)
-        <tr>
-            <td>{!! $consultorio->id !!}</td>
-            <td>{!! $consultorio->id_usuario !!}</td>
-            <td>{!! $consultorio->id_clinica !!}</td>         
-            <td>{!! $consultorio->status !!}</td>
-            <td>
-                <a href="{!! 'consultorios/'.$consultorio->id !!}">Detalle</a>                 
-                <a href="{!! 'consultorios/'.$consultorio->id.'/edit' !!}">Editar</a>
+@extends('template.master')
+@section('contenido_central')
+<div class="wrapper">         
+   <!-- <div class="container-fluid">-->
+        <div class="row">
+            <div class="col-12">
+                <div class="card-box">
+
+                    <h4 class="header-title">Consultorios</h4>
+                    <p class="sub-header">
+                        The Stack Table stacks the table headers to a two column layout with headers on the left. Resize your viewport to across the 40em (640px) breakpoint to see the change.
+                    </p>
+
+                    <table class="tablesaw table mb-0" data-tablesaw-mode="stack">
+                        <thead>
+                        <tr>
+                            <th scope="col" data-tablesaw-sortable-col>ID</th>
+                            <th scope="col" data-tablesaw-sortable-col>ID usuario</th>
+                            <th scope="col" data-tablesaw-sortable-col>ID clinica</th>          
+                            <th scope="col" data-tablesaw-sortable-col>Estatus</th>
+                            <th scope="col" data-tablesaw-sortable-col>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($consultorios as $consultorio)
+                        <tr>
+                            <td>{!! $consultorio->id !!}</td>
+                            <td>{!! $consultorio->id_usuario !!}</td>
+                            <td>{!! $consultorio->id_clinica !!}</td>         
+                            <td>{!! $consultorio->status !!}</td>
+                            <td>
+                                <a href="{!! 'consultorios/'.$consultorio->id !!}">Detalle</a> 
+                                <br>                
+                                <a href="{!! 'consultorios/'.$consultorio->id.'/edit' !!}">Editar</a>
 
 
-                {!! Form::open(['method' => 'DELETE' , 'url' => '/consultorios/'.$consultorio->id]) !!}
-                    {!! Form::submit('Eliminar') !!}
-                {!! Form::close() !!}
-            </td>
-        </tr>
-        @endforeach
-    </table>
-    <br />
-    <a href="{!! asset('cruds') !!}">REGRESAR A LOS CRUDS</a>
-</body>
-</html>
+                                {!! Form::open(['method' => 'DELETE' , 'url' => '/consultorios/'.$consultorio->id]) !!}
+                                    {!! Form::submit('Eliminar') !!}
+                                {!! Form::close() !!}
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div> <!-- end card-box-->
+            
+                <a class="btn btn-outline-primary waves-effect waves-light" href="{!! asset('cruds') !!}">REGRESAR A LOS CRUDS</a>
+            
+        </div> <!-- end col -->
+    </div>
+<!-- </div>-->
+</div>
+@endsection()

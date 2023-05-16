@@ -47,22 +47,22 @@ Route::get('/master3', function() {
 
 Auth::routes();
 
-Route::get('/inventario', [App\Http\Controllers\InventarioController::class, 'inventario_control']);
+//Route::get('/inventario', [App\Http\Controllers\InventarioController::class, 'inventario_control']);
 
 
-Route::get('/formulario', [App\Http\Controllers\FormularioController::class, 'form_control']);
+Route::get('/formulario1', [App\Http\Controllers\FormularioController::class, 'form_control']);
 
-Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'perfil_control']);
+Route::get('/perfil1', [App\Http\Controllers\PerfilController::class, 'perfil_control']);
 
-Route::get('/calendario', [App\Http\Controllers\CalendarioController::class, 'calendario_control']);
+Route::get('/calendario1', [App\Http\Controllers\CalendarioController::class, 'calendario_control']);
 
-Route::get('/clinicas', [App\Http\Controllers\ClinicasController::class, 'clinicas_control']);
+Route::get('/clinicas1', [App\Http\Controllers\ClinicasController::class, 'clinicas_control']);
 
-Route::get('/historialTratamientos', [App\Http\Controllers\HistorialTratamientosController::class, 'historial_tratamientos_control']);
+Route::get('/historialTratamientos1', [App\Http\Controllers\HistorialTratamientosController::class, 'historial_tratamientos_control']);
 
-Route::get('/contactos', [App\Http\Controllers\ContactosController::class, 'contactos_control']);
+Route::get('/contactos1', [App\Http\Controllers\ContactosController::class, 'contactos_control']);
 
-Route::get('/dentistas/{id?}', [App\Http\Controllers\DentistasController::class, 'dentistas_control']);
+Route::get('/dentistas1/{id?}', [App\Http\Controllers\DentistasController::class, 'dentistas_control']);
 
 Route::get('/tratamientos', [App\Http\Controllers\TratamientosController::class, 'tratamientos_control']);
 

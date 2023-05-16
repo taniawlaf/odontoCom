@@ -34,7 +34,7 @@
                                     <a href="contactos">Contactos</a>
                                 </li>-->
                                 <li>
-                                    <a href="historialTratamientos">Historial Tratamientos</a>
+                                    <a href="tratamientos1">Historial Tratamientos</a>
                                 </li>
                                <!-- <li class="has-submenu">
                                     <a href="#">Correo <div class="arrow-down"></div></a>
@@ -55,29 +55,26 @@
                         </li>
 
                         <li class="has-submenu">
-                            <a href="#"> <i class="la la-briefcase"></i>Elements <div class="arrow-down"></div></a>
+                            <a href="#"> <i class="la la-briefcase"></i>Elementos <div class="arrow-down"></div></a>
                             <ul class="submenu">
                                 <li>
-                                    <a href="tratamientos">Tratamientos</a>
+                                    <a href="formulario1">Registrar cita</a>
                                 </li>
                                 <li>
-                                    <a href="formulario">Registrar cita</a>
-                                </li>
-                                <li>
-                                    <a href="clinicas">Ubicaciones de Clinicas</a>
+                                    <a href="clinicas1">Ubicaciones de Clinicas</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="has-submenu">
                             <a href="#">
-                                <i class="la la-diamond"></i>Components <div class="arrow-down"></div></a>
+                                <i class="la la-diamond"></i>Componentes <div class="arrow-down"></div></a>
                             <ul class="submenu">
                                 <li>
-                                    <a href="formulario"> Editar inventario</a>
+                                    <a href="{!! asset('cruds') !!}"> Cruds</a>
                                 </li>
                                 <li>
-                                    <a href="inventario"> Materiales </a>
+                                    <a href="inventario1"> Materiales </a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Graficas <div class="arrow-down"></div></a>
@@ -91,28 +88,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-submenu">
-                            <a href="#">
-                                <i class="la la-diamond"></i>Cruds <div class="arrow-down"></div></a>
-                            <ul class="submenu">
-                                <li>
-                                    <a href="{!! asset('cruds') !!}"> 1</a>
-                                </li>
-                                <li>
-                                    <a href="inventario"> Materiales </a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Graficas <div class="arrow-down"></div></a>
-                                    <ul class="submenu">
-                                        
-                                        <li>
-                                            <a href="charts-brite.html">Grafica de barras</a>
-                                        </li>
-                                        
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+                        
                     </ul>
                     <!-- End navigation menu -->
 
