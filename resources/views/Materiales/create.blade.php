@@ -8,7 +8,7 @@
             <p class="sub-header">llena los campos y guarda tus cambios al dar clic en el boton</p>
             <br>
             <br>
-            {!! Form::open(['url'=>'/material']) !!}
+            {!! Form::open(['url'=>'/materiales']) !!}
                 
 
             <div class="form-group row mb-3">    

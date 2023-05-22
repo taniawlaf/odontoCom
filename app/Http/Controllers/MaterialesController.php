@@ -52,14 +52,14 @@ class MaterialesController extends Controller
                   ->orderBy('nombre')->get();          
 
 
-        return view('materiales.index')->with('materiales', $materiales);
+        return view('Materiales.index')->with('materiales', $materiales);
     }
     
     
     
     public function create()
     {
-        return view('materiales.create');
+        return view('Materiales.create');
     }    
 
     
@@ -76,7 +76,7 @@ class MaterialesController extends Controller
     public function show($id)
     {
         $material = Materiale::find($id);
-        return view('materiales.read')->with('material', $material);
+        return view('Materiales.read')->with('material', $material);
     }
     
     
@@ -84,7 +84,7 @@ class MaterialesController extends Controller
     public function edit($id)
     {
         $material = Materiale::find($id);
-        return view('materiales.edit')->with('material', $material);
+        return view('Materiales.edit')->with('material', $material);
     }
     
     

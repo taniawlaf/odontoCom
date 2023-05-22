@@ -16,7 +16,7 @@
                             
                         <tr>
                             <th scope="col" data-tablesaw-sortable-col>ID</th>
-                            <th scope="col" data-tablesaw-sortable-col>ID tipo Tratamiento</th>
+                            <th scope="col" data-tablesaw-sortable-col>tipo Tratamiento</th>
                             <th scope="col" data-tablesaw-sortable-col>Nombre</th>
                             <th scope="col" data-tablesaw-sortable-col>Costo</th>             
                             <th scope="col" data-tablesaw-sortable-col>descripcion</th>
@@ -27,7 +27,7 @@
                             @foreach($tratamientos as $tratamiento)
                             <tr>
                                 <td>{!! $tratamiento->id !!}</td>
-                                <td>{!! $tratamiento->id_tipo_tratamiento !!}</td>
+                                <td>{!! $tratamiento->tipos_tratamiento->nombre !!}</td>
                                 <td>{!! $tratamiento->nombre !!}</td>
                                 <td>{!! $tratamiento->costo !!}</td>           
                                 <td>{!! $tratamiento->descripcion !!}</td>

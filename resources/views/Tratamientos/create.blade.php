@@ -10,6 +10,13 @@
             <br>
             {!! Form::open(['url'=>'/tratamiento']) !!}
         
+            <div class="form-group row mb-3">
+                {!! Form::label ('id_tipo_tratamiento','Tipo tratamiento:',['class' => 'control-label']) !!}
+                <div class= col-md-9>
+                {!! Form::select ('id_tipo_tratamiento', $tiposTratamiento->pluck('nombre','id')->all() , null ,['placeholder'=>'Seleccionar ...','class'=>'btn-outline-info']) !!}
+                </div>
+            </div>
+                <br />
             
             <div class="form-group row mb-3">        
                 {!! Form::label ('nombre','Nombre del Tratamiento') !!}
@@ -18,11 +25,12 @@
                 </div>
                             
             </div> 
+           
             <br>
             <div class="form-group row mb-3">
-                {!! Form::label ('precio','Precio:') !!}
+                {!! Form::label ('costo','Costo:') !!}
                 <div class= col-md-9>
-                    {!! Form::number ('precio', null,['placeholder'=>'Ingresa precio del Tratamiento','class'=>'form-control']) !!}
+                    {!! Form::number ('costo', null,['placeholder'=>'Ingresa precio del Tratamiento','class'=>'form-control']) !!}
                 </div>
                             
             </div> 

@@ -15,8 +15,11 @@
                         <thead>
                         <tr>
                             <th scope="col" data-tablesaw-sortable-col>ID</th>
-                            <th scope="col" data-tablesaw-sortable-col>ID usuario</th>
-                            <th scope="col" data-tablesaw-sortable-col>ID clinica</th>          
+                            
+                            <th scope="col" data-tablesaw-sortable-col>usuario</th>
+                            
+                            <th scope="col" data-tablesaw-sortable-col> clinica</th>
+                            <th scope="col" data-tablesaw-sortable-col>institucion</th>        
                             <th scope="col" data-tablesaw-sortable-col>Estatus</th>
                             <th scope="col" data-tablesaw-sortable-col>Acciones</th>
                         </tr>
@@ -25,8 +28,11 @@
                         @foreach($consultorios as $consultorio)
                         <tr>
                             <td>{!! $consultorio->id !!}</td>
-                            <td>{!! $consultorio->id_usuario !!}</td>
-                            <td>{!! $consultorio->id_clinica !!}</td>         
+                            
+                            <td>{!! $consultorio->usuario->nombre !!}</td>
+                            
+                            <td>{!! $consultorio->clinica->nombre !!}</td> 
+                            <td>{!! $consultorio->clinica->institucion !!}</td>         
                             <td>{!! $consultorio->status !!}</td>
                             <td>
                                 <a href="{!! 'consultorios/'.$consultorio->id !!}">Detalle</a> 

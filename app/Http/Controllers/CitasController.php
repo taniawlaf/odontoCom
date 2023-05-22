@@ -35,7 +35,7 @@ class CitasController extends Controller
     {
         $datos = $request->all();
         Cita::create($datos);
-        return redirect('/cita');
+        return redirect('/citas');
     }
     
     
@@ -65,7 +65,7 @@ class CitasController extends Controller
         $datos = $request->all();
         $cita = Cita::find($id);
         $cita->update($datos);
-        return redirect('/cita');
+        return redirect('/citas');
     }
     
     
@@ -74,6 +74,6 @@ class CitasController extends Controller
         $cita = Cita::find($id);
         $cita->status = 0;
         $cita->save();
-        return redirect('/cita');
+        return redirect('/citas');
     }
 }

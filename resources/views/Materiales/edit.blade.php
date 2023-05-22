@@ -7,7 +7,7 @@
             <h4 class="header-title">Editar campos</h4>
             <p class="sub-header">edita los campos y guarda tus cambios al dar clic en el boton</p>
                     <br><br>
-            {!! Form::open([ 'method' => 'PATCH' , 'url'=>'/material/'.$material->id]) !!}
+            {!! Form::open([ 'method' => 'PATCH' , 'url'=>'/materiales/'.$material->id]) !!}
 
             <div class="form-group row mb-3">    
             {!! Form::label ('nombre','nombre:',['class' => 'control-label']) !!}

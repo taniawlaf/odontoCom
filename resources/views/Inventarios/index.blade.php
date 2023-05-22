@@ -15,8 +15,10 @@
                         <thead>
                         <tr>
                             <th scope="col" data-tablesaw-sortable-col>ID</th>
-                            <th scope="col" data-tablesaw-sortable-col>ID material</th>
-                            <th scope="col" data-tablesaw-sortable-col>ID usuario</th>
+                            
+                            <th scope="col" data-tablesaw-sortable-col>material</th>
+                            
+                            <th scope="col" data-tablesaw-sortable-col>usuario</th>
                             <th scope="col" data-tablesaw-sortable-col>existencia</th>
                             <th scope="col" data-tablesaw-sortable-col>stock</th>  
                             <th scope="col" data-tablesaw-sortable-col>Acciones</th>
@@ -26,8 +28,10 @@
                             @foreach($inventarios as $inventario)
                             <tr>
                                 <td>{!! $inventario->id !!}</td>
-                                <td>{!! $inventario->id_material !!}</td>
-                                <td>{!! $inventario->id_usuario !!}</td>
+                                
+                                <td>{!! $inventario->materiale->nombre!!}</td>
+                                
+                                <td>{!! $inventario->usuario->nombre!!}</td>
                                 <td>{!! $inventario->existencia !!}</td>           
                                 <td>{!! $inventario->stock !!}</td>
                                 <td>

@@ -15,10 +15,10 @@
                         <thead>
                         <tr>
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">ID</th>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">ID pais</th>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">ID ent.</th>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">ID mun.</th>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">ID t.Usu.</th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">pais</th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">ent.</th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">mun.</th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">t.Usu.</th>
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">Nombre</th>  
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">ap pat</th>  
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">ap mat</th>  
@@ -35,10 +35,10 @@
                             @foreach($usuarios as $usuario)
                             <tr>
                                 <td>{!! $usuario->id !!}</td>
-                                <td>{!! $usuario->id_pais !!}</td>
-                                <td>{!! $usuario->id_entidad !!}</td>
-                                <td>{!! $usuario->id_municipio !!}</td>
-                                <td>{!! $usuario->id_tipo_usuario !!}</td>
+                                <td>{!! $usuario->paise->nombre !!}</td>
+                                <td>{!! $usuario->entidade->nombre !!}</td>
+                                <td>{!! $usuario->municipio->nombre !!}</td>
+                                <td>{!! $usuario->tipos_usuario->nombre !!}</td>
                                 <td>{!! $usuario->nombre !!}</td>           
                                 <td>{!! $usuario->ap_pat !!}</td>
                                 <td>{!! $usuario->ap_mat !!}</td>

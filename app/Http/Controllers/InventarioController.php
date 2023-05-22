@@ -11,11 +11,11 @@ use App\Models\Usuario;
 class InventarioController extends Controller
 {
     //
-    public function inventario_control()
+   /* public function inventario_control()
 	{
 		$inventarios=Inventario::with(['materiale','usuario'])->get();
 		return view('template.inventario1', ['arrayInventarios'=>$inventarios]);
-	}
+	}**/
 
 	public function index()
     {
@@ -42,7 +42,7 @@ class InventarioController extends Controller
     {
         $datos = $request->all();
         Inventario::create($datos);
-        return redirect('/inventarios');
+        return redirect('/inventario');
     }
     
     
@@ -72,7 +72,7 @@ class InventarioController extends Controller
         $datos = $request->all();
         $inventario = Inventario::find($id);
         $inventario->update($datos);
-        return redirect('/inventarios');
+        return redirect('/inventario');
     }
     
     
@@ -81,6 +81,6 @@ class InventarioController extends Controller
         $inventario = Inventario::find($id);
         $inventario->status = 0;
         $inventario->save();
-        return redirect('/inventarios');
+        return redirect('/inventario');
     }
 }

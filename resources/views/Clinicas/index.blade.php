@@ -15,9 +15,9 @@
                         <thead>
                         <tr>
                             <th scope="col" data-tablesaw-sortable-col>ID</th>
-                            <th scope="col" data-tablesaw-sortable-col>ID pais</th>
-                            <th scope="col" data-tablesaw-sortable-col>ID entidad</th>
-                            <th scope="col" data-tablesaw-sortable-col>ID municipio</th>
+                            <th scope="col" data-tablesaw-sortable-col>pais</th>
+                            <th scope="col" data-tablesaw-sortable-col>entidad</th>
+                            <th scope="col" data-tablesaw-sortable-col>municipio</th>
                             <th scope="col" data-tablesaw-sortable-col>institucion</th>
                             <th scope="col" data-tablesaw-sortable-col>numero</th>            
                             <th scope="col" data-tablesaw-sortable-col>nombre</th>
@@ -29,9 +29,9 @@
                         @foreach($clinica as $clinicas)
                         <tr>
                             <td>{!! $clinicas->id !!}</td>
-                            <td>{!! $clinicas->id_pais !!}</td>
-                            <td>{!! $clinicas->id_entidad !!}</td>
-                            <td>{!! $clinicas->id_municipio!!}</td>
+                            <td>{!! $clinicas->paise->nombre !!}</td>
+                            <td>{!! $clinicas->entidade->nombre!!}</td>
+                            <td>{!! $clinicas->municipio->nombre!!}</td>
                             <td>{!! $clinicas->institucion!!}</td>           
                             <td>{!! $clinicas->numero !!}</td>
                             <td>{!! $clinicas->nombre !!}</td>

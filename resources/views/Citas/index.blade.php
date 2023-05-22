@@ -15,8 +15,9 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>ID tratamiento</th>
-                            <th>ID usuario</th>
+                            <th>Tratamiento</th>
+                            
+                            <th>usuario</th>
                             <th>Fecha</th>
                                         
                             <th>Estatus</th>
@@ -28,8 +29,9 @@
                         @foreach($cita as $citas)
                         <tr>
                             <td>{!! $citas->id !!}</td>
-                            <td>{!! $citas->id_tratamiento !!}</td>
-                            <td>{!! $citas->id_usuario!!}</td>
+                            <td>{!! $citas->tratamiento->nombre !!}</td>
+                            
+                            <td>{!! $citas->usuario->nombre!!}</td>
                             <td>{!! $citas->fecha !!}</td>           
                             <td>{!! $citas->status !!}</td>
                             <td>

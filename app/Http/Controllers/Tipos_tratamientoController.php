@@ -43,7 +43,7 @@ class Tipos_tratamientoController extends Controller
     {
         $datos = $request->all();
         TiposTratamiento::create($datos);
-        return redirect('/tipostratamientos');
+        return redirect('/tiposTratamiento');
     }
     
     
@@ -69,7 +69,7 @@ class Tipos_tratamientoController extends Controller
         $datos = $request->all();
         $tiposTratamientos = TiposTratamiento::find($id);
         $tiposTratamientos->update($datos);
-        return redirect('/tipostratamientos');
+        return redirect('/tiposTratamiento');
     }
     
     public function destroy($id)
@@ -83,6 +83,6 @@ class Tipos_tratamientoController extends Controller
         $tiposTratamientos->status = 0;
         $tiposTratamientos->save();
         
-        return redirect('/tipostratamientos');
+        return redirect('/tiposTratamiento');
     }
 }

@@ -32,7 +32,7 @@
                                 <a href="{!! 'paises/'.$pais->id !!}">Detalle</a>  
                                 <br>             
                                 <a href="{!! 'paises/'.$pais->id.'/edit' !!}">Editar</a>
-                                {!! Form::open(['method' => 'DELETE' , 'url' => '/pais/'.$pais->id]) !!}
+                                {!! Form::open(['method' => 'DELETE' , 'url' => '/paises/'.$pais->id]) !!}
                                         {!! Form::submit('Eliminar',['class'=>'btn-outline-primary']) !!}
                                 {!! Form::close() !!}
                             </td>

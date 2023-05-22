@@ -36,7 +36,7 @@ class TratamientosController extends Controller
     {
         $datos = $request->all();
         Tratamiento::create($datos);
-        return redirect('/tratamientos');
+        return redirect('/tratamiento');
     }
     
     
@@ -64,7 +64,7 @@ class TratamientosController extends Controller
         $datos = $request->all();
         $tratamientos = Tratamiento::find($id);
         $tratamientos->update($datos);
-        return redirect('/tratamientos');
+        return redirect('/tratamiento');
     }
     
     
@@ -73,6 +73,6 @@ class TratamientosController extends Controller
         $tratamientos= Tratamiento::find($id);
         $tratamientos->status = 0;
         $tratamientos->save();
-        return redirect('/tratamientos');
+        return redirect('/tratamiento');
     }
 }

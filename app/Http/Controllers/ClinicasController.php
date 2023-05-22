@@ -46,7 +46,7 @@ class ClinicasController extends Controller
     {
         $datos = $request->all();
         Clinica::create($datos);
-        return redirect('/clinica');
+        return redirect('/clinicas');
     }
     
     
@@ -79,7 +79,7 @@ class ClinicasController extends Controller
         $datos = $request->all();
         $clinica = Clinica::find($id);
         $clinica->update($datos);
-        return redirect('/clinica');
+        return redirect('/clinicas');
     }
     
     
@@ -88,6 +88,6 @@ class ClinicasController extends Controller
         $clinica = Clinica::find($id);
         $clinica->status = 0;
         $clinica->save();
-        return redirect('/clinica');
+        return redirect('/clinicas');
     }
 }
