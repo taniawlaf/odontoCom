@@ -8,7 +8,7 @@
 
                     <h4 class="header-title">Archivos tratamientos</h4>
                     <p class="sub-header">
-                        <a class="btn btn-outline-primary waves-effect waves-light" href="archivos/create">Crear un nuevo archivo</a>
+                        <a class="btn btn-outline-primary waves-effect waves-light" href="archivosTratamientos/create">Crear un nuevo archivo</a>
                     </p>
 
                     <table class="tablesaw table mb-0" data-tablesaw-mode="stack">
@@ -35,7 +35,7 @@
                                 <a href="{!! 'archivosTratamientos/'.$archivos->id.'/edit' !!}">Editar</a>
 
 
-                                {!! Form::open(['method' => 'DELETE' , 'url' => '/archivos/'.$archivos->id]) !!}
+                                {!! Form::open(['method' => 'DELETE' , 'url' => '/archivosTratamientos/'.$archivos->id]) !!}
                                     {!! Form::submit('Eliminar',['class'=>'btn-outline-primary']) !!}
                                 {!! Form::close() !!}
                             </td>
