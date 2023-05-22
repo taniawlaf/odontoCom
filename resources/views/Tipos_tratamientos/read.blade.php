@@ -1,23 +1,26 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detalle de tiposTratamiento</title>
-</head>
-<body>
+@extends('template.master')
+
+@section('contenido_central')
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="card card-body">
+            <h3 class="card-title">Detalle de tipos de Tratamiento</h3>
+            <p class="card-text">
     
-    <h1>Detalle de tiposTratamiento</h1>
+                
 
-    <h2>Id tipo de Tratamiento: {!! $tiposTratamiento->id !!}</h2>
+                <h5>Id tipo de Tratamiento: {!! $tiposTratamiento->id !!}</h5>
 
-    <h2>Nombre del tipo de Tratamiento: {!! $tiposTratamiento->nombre !!}</h2>
+                <h5>Nombre del tipo de Tratamiento: {!! $tiposTratamiento->nombre !!}</h5>
 
-    <h2>Semestre: {!! $tiposTratamiento->semestre!!}</h2>
+                <h5>Semestre: {!! $tiposTratamiento->semestre!!}</h5>
 
-    <h2>Status: {!! $tiposTratamiento->status !!}</h2>
-
-    <br />
-
-    <a href="{!! asset('cruds') !!}">REGRESAR A LOS CRUDS</a>
-
-</body>
-</html>
+                <h5>Status: {!! $tiposTratamiento->status !!}</h5>
+            </p>
+            <br />
+    
+            </div>
+            <a href="{!! asset('tiposTratamiento') !!}" class="btn btn-primary waves-effect waves-light">REGRESAR A LOS TIPOS TRATAMIENTOS</a>
+        </div>
+    </div>
+    @endsection()

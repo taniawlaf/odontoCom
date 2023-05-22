@@ -67,11 +67,11 @@ class UsuariosController extends Controller
         $tipoUsuario = TiposUsuario::select('id','nombre')
                   ->orderBy('nombre')->get();          
         return view('Usuarios.edit')
-               ->with('Usuario', $usuario)
+               ->with('usuario', $usuario)
                ->with('entidades',$entidades)
                ->with('paises',$paises)
-               ->with('Usuario', $municipio)
-               ->with('entidades',$tipoUsuario);
+               ->with('municipio', $municipio)
+               ->with('tipoUsuario',$tipoUsuario);
     }
     
     

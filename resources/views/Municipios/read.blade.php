@@ -1,26 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detalle de Municipio</title>
-</head>
-<body>
-    
-    <h1>Detalle de municipio</h1>
 
-    <h2>Id municipio: {!! $municipio->id_entidad !!}</h2>
+    @extends('template.master')
 
-    <h2>Nombre de la entidad: {!! $municipio->entidade->nombre !!}</h2>
+    @section('contenido_central')
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="card card-body">    
 
-    <h2>Nombre del pais: {!! $municipio->entidade->paise->nombre !!}</h2>
+                <h5>Id municipio: {!! $municipio->id_entidad !!}</h5>
 
-    <h2>Nombre municipio: {!! $municipio->nombre !!}</h2>
+                <h5>Nombre de la entidad: {!! $municipio->entidade->nombre !!}</h5>
 
-    <h2>Status: {!! $municipio->status !!}</h2>
+                <h5>Nombre del pais: {!! $municipio->entidade->paise->nombre !!}</h5>
 
-    <br />
+                <h5>Nombre municipio: {!! $municipio->nombre !!}</h5>
 
-    <a href="{!! asset('cruds') !!}">REGRESAR A LOS CRUDS</a>
+                <h5>Status: {!! $municipio->status !!}</h5>
 
-</body>
-</html>
+            </p>
+            <br />
+            </div>
+            <a href="{!! asset('municipios') !!}" class="btn btn-primary waves-effect waves-light">REGRESAR A LOS MUNICIPIOSS</a>
+        </div>
+    </div>
+    @endsection()

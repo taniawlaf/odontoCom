@@ -8,7 +8,7 @@
 
                     <h4 class="header-title">Materiales</h4>
                     <p class="sub-header">
-                        The Stack Table stacks the table headers to a two column layout with headers on the left. Resize your viewport to across the 40em (640px) breakpoint to see the change.
+                        <a class="btn btn-outline-primary waves-effect waves-light" href="materiales/create">Crear un nuevo material</a>
                     </p>
 
                     <table class="tablesaw table mb-0" data-tablesaw-mode="stack">
@@ -35,7 +35,7 @@
 
 
                                 {!! Form::open(['method' => 'DELETE' , 'url' => '/materiales/'.$material->id]) !!}
-                                    {!! Form::submit('Eliminar') !!}
+                                    {!! Form::submit('Eliminar',['class'=>'btn-outline-primary']) !!}
                                 {!! Form::close() !!}
                             </td>
                         </tr>

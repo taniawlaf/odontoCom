@@ -38,7 +38,7 @@
                                 {{$item->entidade->nombre}}
                                 {{$item->municipio->nombre}}
                             </p>
-                            <a href="dentistas/{{$item->id}}" class="btn btn-primary waves-effect waves-light">Dentistas</a>
+                            <a href="dentistas1/{{$item->id}}" class="btn btn-primary waves-effect waves-light">Dentistas</a>
                     </div>
                 </div>
                     

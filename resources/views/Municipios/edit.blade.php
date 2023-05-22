@@ -1,33 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Editar Municipio</title>
-</head>
-<body>
-    <h1>Editar Municipio</h1>
+@extends('template.master')
 
-    {!! Form::open([ 'method' => 'PATCH' , 'url'=>'/municipios/'.$municipio->id]) !!}
-        
-        {!! Form::label ('id_entidad','Entidad:') !!}
-        {!! Form::select ('id_entidad', $entidades->pluck('nombre','id')->all() , $municipio->id_entidad ,['placeholder'=>'Seleccionar ...']) !!}
-        <br />
-        <br />
-        <br />
+@section('contenido_central')
+<div class="wrapper">
+    <div class="container-fluid">
+       <div class="card-box">
+            <h4 class="header-title">Editar campos</h4>
+            <p class="sub-header">edita los campos y guarda tus cambios al dar clic en el boton</p>
+            <br><br>
 
-        {!! Form::label ('nombre','Nombre del municipio') !!}
-        {!! Form::text ('nombre',$municipio->nombre,['placeholder'=>'Ingresa nombre del municipio']) !!}
-        <br />
-        <br />
+            {!! Form::open([ 'method' => 'PATCH' , 'url'=>'/municipios/'.$municipio->id]) !!}
+                
+                <div class="form-group row mb-3">    
+                {!! Form::label ('id_entidad','Entidad:',['class' => 'control-label']) !!}
+                <div class= col-md-9>
+                    {!! Form::select ('id_entidad', $entidades->pluck('nombre','id')->all() , $municipio->id_entidad ,['placeholder'=>'Seleccionar ...','class'=>'btn-outline-info']) !!}
+                    </div>
+                                
+                </div> 
+                <br>
 
-        {!! Form::label ('status','Estatus:') !!}
-        {!! Form::select ('status', 
-        array('1'=>'Activo','0'=>'Baja') , $municipio->status ,['placeholder'=>'Seleccionar ...']) !!}
-        <br />
-        <br />
-        {!! Form::submit('Guardar Municipio') !!}
-        {!! Form::close() !!}
+                <div class="form-group row mb-3">
+                {!! Form::label ('nombre','Nombre del municipio',['class' => 'control-label']) !!}
+                <div class= col-md-9>
+                {!! Form::text ('nombre',$municipio->nombre,['placeholder'=>'Ingresa nombre del municipio','class'=>'form-control']) !!}
+                    </div>
+                            
+                </div> 
+                <br>
 
-
-</body>
-</html>
+                <div class="form-group row mb-3">
+                {!! Form::label ('status','Estatus:',['class' => 'control-label']) !!}
+                <div class= col-md-9>
+                {!! Form::select ('status', 
+                array('1'=>'Activo','0'=>'Baja') , $municipio->status ,['placeholder'=>'Seleccionar ...','class'=>'btn-outline-info']) !!}
+                    </div>
+                    
+                </div> 
+                <br>
+                <br>
+            {!! Form::submit('Guardar Municipio', ['class' => 'btn btn-success']) !!}
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
+@endsection()

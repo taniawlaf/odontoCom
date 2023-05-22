@@ -1,22 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detalle de Pais</title>
-</head>
-<body>
+@extends('template.master')
+
+@section('contenido_central')
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="card card-body">
+            <h3 class="card-title">Detalle de pais</h3>
+            <p class="card-text">
+                
+
+                <h5>Nombre: {!! $pais->nombre !!}</h5>
+
+                <h5>Clave: {!! $pais->clave !!}</h5>
+
+                <h5>Status: {!! $pais->status !!}</h5>
+            </p>
+            <br />
     
-    <h1>Detalle de pais</h1>
+           
+            </div>
+            <a href="{!! asset('paises') !!}" class="btn btn-primary waves-effect waves-light">REGRESAR A LOS PAISES</a>
+        </div>
+    </div>
+    @endsection()
 
-    <h2>Nombre: {!! $pais->nombre !!}</h2>
-
-    <h2>Clave: {!! $pais->clave !!}</h2>
-
-    <h2>Status: {!! $pais->status !!}</h2>
-
-    <br />
-
-    <a href="{!! asset('cruds') !!}">REGRESAR A LOS CRUDS</a>
-
-</body>
-</html>

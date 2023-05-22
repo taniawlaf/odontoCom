@@ -83,7 +83,7 @@
                                     
 
                                 <div class="form-group mb-0">
-                                    <input type="submit" class="btn btn-success" value="Validate">
+                                    <input type="submit" class="btn btn-success" value="Confirmar">
                                 </div>
 
                             </form>

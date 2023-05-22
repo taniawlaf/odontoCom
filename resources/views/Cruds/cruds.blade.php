@@ -153,7 +153,7 @@
                 <div class="card">
                     <img class="card-img-top img-fluid" src="https://th.bing.com/th/id/OIP.KRXZH6lbUSYL0uyHVOW-wQHaHa?pid=ImgDet&rs=1" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title"><a href="{!! asset('archivosTratamientos') !!}">Archivos de Tratamientos</a></</h5>
+                        <h5 class="card-title"><a href="{!! asset('archivosTratamientos') !!}">Archivos de Tratamientos</a></h5>
                         <p class="card-text">gestion de la tabla Archivos cde Tratamientos</p>
                         
                     </div>

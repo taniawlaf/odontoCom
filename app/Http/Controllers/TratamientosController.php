@@ -12,7 +12,7 @@ class TratamientosController extends Controller
     //
     public function tratamientos_control()
 	{
-		return view('template.tratamientos');
+		return view('template.tratamientos1');
 	}
 	public function index()
     {

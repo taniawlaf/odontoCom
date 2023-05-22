@@ -34,7 +34,7 @@
                                     <a href="contactos">Contactos</a>
                                 </li>-->
                                 <li>
-                                    <a href="tratamientos1">Historial Tratamientos</a>
+                                    <a href="historialTratamientos1">Historial Tratamientos</a>
                                 </li>
                                <!-- <li class="has-submenu">
                                     <a href="#">Correo <div class="arrow-down"></div></a>
@@ -73,9 +73,7 @@
                                 <li>
                                     <a href="{!! asset('cruds') !!}"> Cruds</a>
                                 </li>
-                                <li>
-                                    <a href="inventario1"> Materiales </a>
-                                </li>
+                            
                                 <li>
                                     <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Graficas <div class="arrow-down"></div></a>
                                     <ul class="submenu">

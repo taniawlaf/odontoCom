@@ -53,8 +53,8 @@ class CitasController extends Controller
                   ->orderBy('nombre')->get();
         $usuarios = Usuario::select('id','nombre')
                   ->orderBy('nombre')->get();           
-        return view('cita.edit')
-               ->with('cita', $cita)
+        return view('citas.edit')
+               ->with('citas', $cita)
                ->with('tratamientos',$tratamientos)
                ->with('usuarios',$usuarios);
     }

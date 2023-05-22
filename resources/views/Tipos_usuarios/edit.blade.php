@@ -1,31 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Editar tipos Usuario</title>
-</head>
-<body>
-    <h1>Editar tipos Usuario</h1>
+@extends('template.master')
 
-    {!! Form::open([ 'method' => 'PATCH' , 'url'=>'/tiposUsuario/'.$tiposUsuario->id]) !!}
-        
-        {!! Form::label ('nombre','nombre:') !!}
-        {!! Form::select('nombre',$tiposUsuario->nombre,['placeholder'=>'Ingresa nombre del tiposUsuario']) !!}
-        <br />
-        <br />
-        {!! Form::label ('semestre','semestre:') !!}
-        {!! Form::select('semestre',$tiposUsuario->semestre,['placeholder'=>'Ingresa nombre del tiposUsuario']) !!}
-        <br />
-        <br />
-        
-        {!! Form::label ('status','Estatus:') !!}
-        {!! Form::select ('status', 
-        array('1'=>'Activo','0'=>'Baja') , $tiposUsuario->status ,['placeholder'=>'Seleccionar ...']) !!}
-        <br />
-        <br />
-        {!! Form::submit('Guardar tiposUsuario') !!}
-        {!! Form::close() !!}
+@section('contenido_central')
+<div class="wrapper">
+    <div class="container-fluid">
+       <div class="card-box">
+            <h4 class="header-title">Editar campos</h4>
+            <p class="sub-header">edita los campos y guarda tus cambios al dar clic en el boton</p>
+            <br><br>
 
-
-</body>
-</html>
+            {!! Form::open([ 'method' => 'PATCH' , 'url'=>'/tiposUsuario/'.$tiposUsuario->id]) !!}
+                
+            <div class="form-group row mb-3">    
+                {!! Form::label ('nombre','nombre:') !!}
+                <div class= col-md-9>
+                {!! Form::text('nombre',$tiposUsuario->nombre,['placeholder'=>'Ingresa nombre del tiposUsuario','class'=>'form-control']) !!}
+                </div>
+            </div>
+                <br />
+                <br />
+            <div class="form-group row mb-3">
+                {!! Form::label ('nivel','nivel:') !!}
+                <div class= col-md-9>
+                {!! Form::text('nivel',$tiposUsuario->nivel,['placeholder'=>'Ingresa nombre del tiposUsuario','class'=>'form-control']) !!}
+                </div>
+            </div>
+                <br />
+                <br />
+                
+            <div class="form-group row mb-3">
+                {!! Form::label ('status','Estatus:') !!}
+                <div class= col-md-9>
+                {!! Form::select ('status', 
+                array('1'=>'Activo','0'=>'Baja') , $tiposUsuario->status ,['placeholder'=>'Seleccionar ...','class'=>'btn-outline-info']) !!}
+                </div>
+            </div>
+                
+                <br />
+                <br />
+                <br>
+            {!! Form::submit('Guardar tiposUsuario', ['class' => 'btn btn-success']) !!}
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
+@endsection()

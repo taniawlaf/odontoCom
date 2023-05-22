@@ -1,23 +1,26 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detalle de tipos de Usuario</title>
-</head>
-<body>
+@extends('template.master')
+
+@section('contenido_central')
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="card card-body">
+            <h3 class="card-title">Detalle de tipos de Usuario</h3>
+            <p class="card-text">
     
-    <h1>Detalle de tipos de Usuario</h1>
+                
 
-    <h2>Id tiposUsuario: {!! $tiposUsuario->id !!}</h2>
+                <h5>Id tiposUsuario: {!! $tiposUsuario->id !!}</h5>
 
-    <h2>Nombre del tipo de Usuario: {!! $tiposUsuario->nombre !!}</h2>
+                <h5>Nombre del tipo de Usuario: {!! $tiposUsuario->nombre !!}</h5>
 
-    <h2>Nivel: {!! $tiposUsuario->nivel!!}</h2>
+                <h5>Nivel: {!! $tiposUsuario->nivel!!}</h5>
 
-    <h2>Status: {!! $tiposUsuario->status !!}</h2>
+                <h5>Status: {!! $tiposUsuario->status !!}</h5>
 
-    <br />
+            </p>
+        <br />
 
-    <a href="{!! asset('cruds') !!}">REGRESAR A LOS CRUDS</a>
-
-</body>
-</html>
+        </div>
+        <a href="{!! asset('tiposUsuario') !!}" class="btn btn-primary waves-effect waves-light">REGRESAR A LOS CRUDSTIPOS USUARIOS </a>>
+</div>
+@endsection()

@@ -1,27 +1,27 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detalle de tratamiento</title>
-</head>
-<body>
-    
-    <h1>Detalle de tratamiento</h1>
+@extends('template.master')
 
-    <h2>Id tratamiento: {!! $tratamientos->id !!}</h2>
+@section('contenido_central')
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="card card-body">
+            <h3 class="card-title">Detalle de tratamiento</h3>
+            <p class="card-text">
+                <h5>Id tratamiento: {!! $tratamientos->id !!}</h5>
 
-    <h2>Nombre del tratamiento: {!! $tratamientos->nombre !!}</h2>
+                <h5>Nombre del tratamiento: {!! $tratamientos->nombre !!}</h5>
 
-    <h2>Descripcion: {!! $tratamientos->descripcion!!}</h2>
+                <h5>Descripcion: {!! $tratamientos->descripcion!!}</h5>
 
-    <h2>Costo: {!! $tratamientos->costo!!}</h2>
+                <h5>Costo: {!! $tratamientos->costo!!}</h5>
 
-    <h2>Tipo de Tratamiento: {!! $tratamientos->tipos_tratamiento->nombre !!}</h2>
+                <h5>Tipo de Tratamiento: {!! $tratamientos->tipos_tratamiento->nombre !!}</h5>
 
-    <h2>Status: {!! $tratamientos->status !!}</h2>
+                <h5>Status: {!! $tratamientos->status !!}</h5>
 
-    <br />
-
-    <a href="{!! asset('cruds') !!}">REGRESAR A LOS CRUDS</a>
-
-</body>
-</html>
+            </p>
+            <br />
+        </div>
+        <a href="{!! asset('tratamiento') !!}" class="btn btn-primary waves-effect waves-light">REGRESAR A LOS TRATAMIENTOS</a>
+    </div>
+</div>
+@endsection()

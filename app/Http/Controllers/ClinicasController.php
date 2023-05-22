@@ -59,7 +59,7 @@ class ClinicasController extends Controller
     
     public function edit($id)
     {
-        $clinica = Clinica::find($id);
+        $clinicas = Clinica::find($id);
         $entidades = Entidade::select('id','nombre')
                   ->orderBy('nombre')->get();
         $paises = Paise::select('id','nombre')
@@ -67,7 +67,7 @@ class ClinicasController extends Controller
 		$municipio = Municipio::select('id','nombre')
                   ->orderBy('nombre')->get();        
         return view('Clinicas.edit')
-               ->with('clinica', $clinica)
+               ->with('clinica', $clinicas)
                ->with('entidades',$entidades)
                ->with('paises',$paises)
 			   ->with('municipio',$municipio);

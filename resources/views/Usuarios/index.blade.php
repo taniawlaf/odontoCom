@@ -8,7 +8,7 @@
 
                     <h4 class="header-title">Usuarios</h4>
                     <p class="sub-header">
-                        The Stack Table stacks the table headers to a two column layout with headers on the left. Resize your viewport to across the 40em (640px) breakpoint to see the change.
+                        <a class="btn btn-outline-primary waves-effect waves-light" href="usuarios/create">Crear un nuevo usuario</a>
                     </p>
 
                     <table class="tablesaw table mb-0" data-tablesaw-mode="stack">
@@ -54,7 +54,7 @@
                     
                     
                                     {!! Form::open(['method' => 'DELETE' , 'url' => '/usuarios/'.$usuario->id]) !!}
-                                        {!! Form::submit('Eliminar') !!}
+                                        {!! Form::submit('Eliminar',['class'=>'btn-outline-primary']) !!}
                                     {!! Form::close() !!}
                                 </td>
                             </tr>

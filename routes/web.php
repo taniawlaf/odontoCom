@@ -64,7 +64,7 @@ Route::get('/contactos1', [App\Http\Controllers\ContactosController::class, 'con
 
 Route::get('/dentistas1/{id?}', [App\Http\Controllers\DentistasController::class, 'dentistas_control']);
 
-Route::get('/tratamientos', [App\Http\Controllers\TratamientosController::class, 'tratamientos_control']);
+Route::get('/tratamientos1', [App\Http\Controllers\TratamientosController::class, 'tratamientos_control']);
 
 
 Route::get('/',function(){
