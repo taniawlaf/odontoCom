@@ -38,8 +38,20 @@ class Archivos_TratamientosController extends Controller
     public function store(Request $request)
     {
         $datos = $request->all();
-        ArchivosTratamiento::create($datos);
-        return redirect('/archivosTratamientos');
+        $hora = date("h:i:s");
+        $fecha = date("d-m-Y");
+        $prefijo = $fecha."_". $hora;
+        $archiv = $request-> file('archivo');
+        $nombre_archiv = $archiv->getClientOriginalName();
+        $rl = Storage::disk('archivos')->put($nombre_archiv, \File::get($archiv));
+        if ($rl) {
+            $datos['ruta']=$nombre_archiv;
+            ArchivosTratamiento::create($datos);
+            return redirect('/archivosTratamientos');
+        } else {
+            return "Error al guardar la foto";
+        }
+        
     }
     
     
@@ -65,9 +77,21 @@ class Archivos_TratamientosController extends Controller
     public function update(Request $request, $id)
     {
         $datos = $request->all();
-        $archivosTratamientos = ArchivosTratamiento::find($id);
-        $archivosTratamientos->update($datos);
-        return redirect('/archivosTratamientos');
+        $archiv = ArchivosTratamiento::find($id);
+        $hora = date("h:i:s");
+        $fecha = date("d-m-Y");
+        $prefijo = $fecha."_". $hora;
+        $archivo= $request-> file('archivo');
+        $nombre_archiv = $archivo->getClientOriginalName();
+        $rl = Storage::disk('archivos')->put($nombre_archiv, \File::get($archivo));
+        if ($rl) {
+            $datos['ruta']=$nombre_archiv;
+            ArchivosTratamiento::update($datos);
+            return redirect('/archivosTratamientos');
+        } else {
+            return "Error al guardar la foto";
+        }
+    
     }
     
     

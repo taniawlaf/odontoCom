@@ -55,7 +55,7 @@
                                 <p class="text-muted mt-2"> El correo ha sido enviado
                                      </p>
 
-                                <a href="clinicas" class="btn btn-block btn-danger waves-effect waves-light mt-3">Volver</a>
+                                <a href="clinicas1" class="btn btn-block btn-primary waves-effect waves-light mt-3">Volver</a>
                             </div>
 
                         </div> <!-- end card-body -->

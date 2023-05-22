@@ -39,9 +39,10 @@
                             <br>
                             {{$item->usuario->email}}
                         </p>
-                        <form action="{{ route('enviarcorreo') }}" method="POST">
-                            @csrf
-                             <button type="submit" class="btn btn-primary waves-effect waves-light">Enviar correo</button>
+                        <form >
+                            <a href="{!! asset('form_mail') !!}"class="btn btn-block btn-primary waves-effect waves-light mt-3">Enviar Correo Correo</a>
+                            
+                            
                          </form>
                     </div> <!-- end .padding -->
                 </div> <!-- end card-box-->

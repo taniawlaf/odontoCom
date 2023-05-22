@@ -73,6 +73,10 @@
                                 <li>
                                     <a href="{!! asset('cruds') !!}"> Cruds</a>
                                 </li>
+
+                                <li>
+                                    <a href="{!! asset('form_mail') !!}"> Correo</a>
+                                </li>
                             
                                 <li>
                                     <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Graficas <div class="arrow-down"></div></a>

@@ -27,4 +27,5 @@ class DentistasController extends Controller
 		]);
         
 	}
+	
 }

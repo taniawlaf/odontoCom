@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Archivos_TratamientosController;
 use App\Http\Controllers\ClinicasController;
 use App\Http\Controllers\ConsultoriosController;
+use App\Http\Controllers\CorreoController;
 use App\Http\Controllers\EntidadesController;
 use App\Http\Controllers\CitasController; //citas
 use App\Http\Controllers\InventarioController;
@@ -115,6 +116,10 @@ Route::resource('tiposTratamiento',Tipos_tratamientoController::class );
 Route::resource('tratamiento',TratamientosController::class );
 Route::resource('tiposUsuario',Tipos_usuarioController::class );
 Route::resource('usuarios',UsuariosController::class );
+
+Route::get('form_mail',[CorreoController::class,'formulario_correo']);
+
+Route::post('enviar_correo',[CorreoController::class,'enviar']);
 
 Route::get('cruds',function(){
     return view('Cruds.cruds');

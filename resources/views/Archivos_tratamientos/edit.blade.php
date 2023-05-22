@@ -18,9 +18,10 @@
         </div> 
         <br>
         <div class="form-group row mb-3">
-            {!! Form::label ('ruta','ruta:') !!}
-            <div class= col-md-9>
-            {!! Form::text('ruta',$archivosTratamientos->ruta,['placeholder'=>'Ingresa ruta del tratamiento','class'=>'form-control']) !!}
+            {!! Form::hidden ('ruta','archivos') !!}
+        {!! Form::label ('archivo','Seleccionar foto',['class' => 'control-label']) !!}
+        <div class= col-md-9>
+        {!! Form::file ('archivo',null,['accept'=>'.jpg,.jpeg,.bmp,.png,.docx']) !!}
             </div>
         </div>
         <br />

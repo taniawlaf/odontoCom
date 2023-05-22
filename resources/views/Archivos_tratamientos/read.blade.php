@@ -17,6 +17,10 @@
 
                 <h5>Estatus:: {!! $archivosTratamientos->status !!}</h5>
 
+                
+                <img  src="../storage/archivos/{!! $archivosTratamientos->ruta  !!}"/>
+                
+
                 <br />
 
                 

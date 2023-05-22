@@ -8,7 +8,7 @@
             <p class="sub-header">llena los campos y guarda tus cambios al dar clic en el boton</p>
             <br>
             <br>
-            {!! Form::open(['url'=>'archivosTratamientos']) !!}
+            {!! Form::open(['url'=>'archivosTratamientos', 'enctype'=>'multipart/form-data']) !!}
                 
             <div class="form-group row mb-3">    
             {!! Form::label ('id_tratamiento','Tratamiento:',['class' => 'control-label']) !!}
@@ -16,12 +16,19 @@
                 {!! Form::select ('id_tratamiento', $tratamiento->pluck('nombre','id')->all() , null ,['placeholder'=>'Seleccionar ...','class'=>'btn-outline-info']) !!}
             </div>
         </div>
-        
+
         <br>
         <div class="form-group row mb-3">
-            {!! Form::label ('ruta','ruta del Tratamiento') !!}
+            {!! Form::hidden ('ruta','archivos') !!}
+                        
+        </div> 
+        <br>
+    
+        <br>
+        <div class="form-group row mb-3">
+            {!! Form::label ('archivo','archivo del Tratamiento',['class' => 'control-label']) !!}
             <div class= col-md-9>
-                {!! Form::text ('ruta',null,['placeholder'=>'Ingresa ruta del Tratamiento','class'=>'form-control']) !!}
+                {!! Form::file ('archivo',null,['accept'=>'.jpg,.jpeg,.txt,.png,.doc,.docx']) !!}
             </div>
                         
         </div> 

@@ -11,11 +11,12 @@
                         <a class="btn btn-outline-primary waves-effect waves-light" href="archivosTratamientos/create">Crear un nuevo archivo</a>
                     </p>
 
-                    <table class="tablesaw table mb-0" data-tablesaw-mode="stack">
+                    <table class="tablesaw table mb-0" >
                         <thead>
                         <tr>
                             <th scope="col" data-tablesaw-sortable-col>ID</th>
                             <th scope="col" data-tablesaw-sortable-col>ID id_tratamiento</th>
+                            <th scope="col" data-tablesaw-sortable-col>imagen</th>  
                             <th scope="col" data-tablesaw-sortable-col>ruta</th>        
                             <th scope="col" data-tablesaw-sortable-col>Estatus</th>
                             <th scope="col" data-tablesaw-sortable-col>Acciones</th>
@@ -26,7 +27,8 @@
                         <tr>
                             <td>{!! $archivos->id !!}</td>
                             <td>{!! $archivos->id_tratamiento !!}</td>
-                            <td>{!! $archivos->ruta!!}</td>
+                            <td><img  src="../storage/archivos/{!! $archivos->ruta  !!}"/></td>
+                            <td>{!! $archivos->ruta !!}</td>
                             <td>{!! $archivos->status !!}</td>           
                             
                             <td>
