@@ -124,3 +124,7 @@ Route::post('enviar_correo',[CorreoController::class,'enviar']);
 Route::get('cruds',function(){
     return view('Cruds.cruds');
 });
+
+Route::get('combo_entidad_muni/{id_pais}',[MunicipiosController::class, 'cambiar_combo']);
+
+Route::get('combo_municipio/{id_entidad}',[MunicipiosController::class, 'cambiar_combo_2']);

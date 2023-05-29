@@ -4,7 +4,8 @@
     @section('contenido_central')
     <div class="wrapper">
         <div class="container-fluid">
-            <div class="card card-body">    
+            <div class="card card-body"> 
+                <h3 class="card-title">Detalle de municipio</h3>   
 
                 <h5>Id municipio: {!! $municipio->id_entidad !!}</h5>
 

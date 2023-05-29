@@ -20,13 +20,15 @@ class MunicipiosController extends Controller
     
     public function create()
     {
+        $paises = Paise::select('id','nombre')
+                  ->orderBy('nombre')->get(); 
         $entidades = Entidade::select('id','nombre')
                   ->orderBy('nombre')->get();
-        $paises = Paise::select('id','nombre')
-                  ->orderBy('nombre')->get();          
+                 
         return view('Municipios.create')
-                ->with('entidades',$entidades)
-                ->with('paises',$paises);
+                ->with('paises',$paises)
+                ->with('entidades',$entidades);
+               
     }
     
     
@@ -49,6 +51,7 @@ class MunicipiosController extends Controller
     {
         $municipio = Municipio::find($id);
         $entidades = Entidade::select('id','nombre')
+                    ->where('id_pais', $municipio->entidade->id_paise)
                   ->orderBy('nombre')->get();
         $paises = Paise::select('id','nombre')
                   ->orderBy('nombre')->get();           
@@ -75,4 +78,23 @@ class MunicipiosController extends Controller
         $municipio->save();
         return redirect('/municipios');
     }
+
+    public function cambiar_combo($id_pais){
+        $entidades = Entidade::
+                    select('id','nombre')
+                    ->where('id_pais',$id_pais)
+                    ->orderBy('nombre') 
+                    ->get();
+        return $entidades;
+    }
+
+    public function cambiar_combo_2($id_entidad){
+        $municipios = Municipio::
+                    select('id','nombre')
+                    ->where('id_entidad', $id_entidad)
+                    ->orderBy('nombre')
+                    ->get(); 
+        return $municipios;
+    }
+
 }

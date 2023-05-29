@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 use App\Models\Municipio;
 use App\Models\Entidade;
@@ -24,18 +25,18 @@ class UsuariosController extends Controller
     
     public function create()
     {
+        // $municipio = Municipio::select('id','nombre')
+        //           ->orderBy('nombre')->get();
         $entidades = Entidade::select('id','nombre')
-                  ->orderBy('nombre')->get();
+                    ->orderBy('nombre')->get();
         $paises = Paise::select('id','nombre')
                   ->orderBy('nombre')->get(); 
-        $municipio = Municipio::select('id','nombre')
-                  ->orderBy('nombre')->get();
         $tipoUsuario = TiposUsuario::select('id','nombre')
                   ->orderBy('nombre')->get();         
         return view('Usuarios.create')
-                ->with('entidades',$entidades)
+                // ->with('municipio',$municipio)
+                 ->with('entidades',$entidades)
                 ->with('paises',$paises)
-                ->with('municipio',$municipio)
                 ->with('tipoUsuario',$tipoUsuario);
     }
     
@@ -43,6 +44,7 @@ class UsuariosController extends Controller
     public function store(Request $request)
     {
         $datos = $request->all();
+        $datos['password'] = Hash::make($request->input('password'));
         Usuario::create($datos);
         return redirect('/usuarios');
     }

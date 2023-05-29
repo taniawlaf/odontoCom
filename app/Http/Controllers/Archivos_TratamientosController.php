@@ -74,7 +74,7 @@ class Archivos_TratamientosController extends Controller
     }
     
     
-    public function update(Request $request, $id)
+    public function update(Request $request, string $id)
     {
         $datos = $request->all();
         $archiv = ArchivosTratamiento::find($id);
@@ -86,7 +86,7 @@ class Archivos_TratamientosController extends Controller
         $rl = Storage::disk('archivos')->put($nombre_archiv, \File::get($archivo));
         if ($rl) {
             $datos['ruta']=$nombre_archiv;
-            ArchivosTratamiento::update($datos);
+            $archiv->update($datos);
             return redirect('/archivosTratamientos');
         } else {
             return "Error al guardar la foto";
